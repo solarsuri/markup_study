@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>변수</title>
+
+  <style>
+    .box {
+      display: flex;
+    }
+
+    .box2 {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .box3 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box4 {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .input, .output {
+      width: 90%;
+      height: 10em;
+      padding: 10px;
+      border: 1px solid #0095dd;
+      overflow: auto;
+    }
+
+    button {
+      padding: 10px 10px 10px 0;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three
+    <br>has
+    <br>extra
+    <br>text
+  </div>
+</div>
+
+<div class="box2">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+
+<div class="box3">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+
+<div class="box4">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+
+<p>I'm creating a link to
+  <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+</p>
+
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+
+
+<!--Marking up a set of definitions-->
+<h2>인풋</h2>
+<textarea name="" id="code" cols="30" rows="10" class="input">
+  Bacon
+The glue that binds the world together.
+Eggs
+The glue that binds the cake together.
+Coffee
+The drink that gets the world running in the morning.
+A light brown color.
+</textarea>
+<h2>아웃풋</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="show solution">
+</div>
+
+
+<!--Blockquotes 태그-->
+<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+    Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+
+
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+  for short quotations that don't require paragraph breaks.</q></p>
+
+
+<!--
+  cite 요소
+  창작물에 대한 참조를 나타냅니다. 이것은 인용 메타데이터의 추가를 위해 규칙에 따라 단축된 창작물의 제목이나 URL 참조를 포함해야합니다.
+-->
+<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <cite>MDN blockquote page</cite></a>:
+</p>
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+    Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+  for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <cite>MDN q page</cite></a>.</p>
+
+
+
+<!--축약 abbr-->
+<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+<p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+
+
+<time datetime="2016-01-20">20 January 2016</time>
+
+
+<!--
+
+  문서의 기본 섹션
+    header
+    navigation bar
+    main content
+    side bar
+    footer
+
+-->
+
+
+<!--테이블-->
+<table>
+  <colgroup>
+    <col>
+    <col style="background-color: yellow;">
+  </colgroup>
+  <tr>
+    <th>data 1</th>
+    <th>data 2</th>
+  </tr>
+  <tr>
+    <td>Calcutta</td>
+    <td>Orange</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>Jazz</td>
+  </tr>
+</table>
+
+
+
+<!--nesting table-->
+<table id="table1" style="border: 1px solid #ccc;">
+  <tr>
+    <th>title1</th>
+    <th>title2</th>
+    <th>title3</th>
+  </tr>
+  <tr>
+    <td id="nested">
+      <table id="table2" style="border: 1px solid #ccc;">
+        <tr>
+          <td>cell1</td>
+          <td>cell2</td>
+          <td>cell3</td>
+        </tr>
+      </table>
+    </td>
+    <td>cell2</td>
+    <td>cell3</td>
+  </tr>
+  <tr>
+    <td>cell4</td>
+    <td>cell5</td>
+    <td>cell6</td>
+  </tr>
+</table>
+
+
+
+
+<form>
+  <fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small">
+      <label for="size_1">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium">
+      <label for="size_2">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large">
+      <label for="size_3">Large</label>
+    </p>
+  </fieldset>
+</form>
+
+
+
+
+
+
+
+<script>
+
+    //Marking up a set of definitions
+    var textarea = document.getElementById("code");
+    var reset = document.getElementById("reset");
+    var code = textarea.value;
+    var output = document.querySelector(".output");
+    var solution = document.getElementById("solution");
+
+    function drawOutput() {
+        output.innerHTML = textarea.value;
+    }
+
+    reset.addEventListener("click", function () {
+        textarea.value = code;
+        drawOutput();
+    })
+
+    solution.addEventListener("click", function () {
+        textarea.value = '<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>';
+        drawOutput();
+    });
+    textarea.addEventListener("input", drawOutput);
+    window.addEventListener("load",drawOutput);
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

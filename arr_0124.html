@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>문자열 제대로 다루기</title>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+<!--flitering greeting messages-->
+<div class="output" style="min-height: 125px;">
+
+  <ul>
+
+  </ul>
+
+</div>
+<textarea id="code" class="playable-code" style="height: 290px;">
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\'re all I want for Christmas',
+                 'Get well soon'];
+
+for (var i = 0; i < greetings.length; i++) {
+  var input = greetings[i];
+  // Your conditional test needs to go inside the parentheses
+  // in the line below, replacing what's currently there
+  if (greetings[i]) {
+    var result = input;
+    var listItem = document.createElement('li');
+    listItem.textContent = result;
+    list.appendChild(listItem);
+  }
+}
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+
+
+<script>
+
+    // 대소문자 변경
+    var radData = 'My NaMe Is MuD';
+    radData.toLowerCase();
+    radData.toUpperCase();
+
+    //인삿말 필터링
+    var textarea = document.getElementById('code');  // 변수 textarea는 문서 내 code 아이디를 가져오도록 한다.( textarea = #code
+    var reset = document.getElementById('reset');
+    var solution = document.getElementById('solution');
+    var code = textarea.value(); // 변수 code는 textarea의 값
+
+    function updateCode() {
+        eval(textarea.value);
+    }
+
+    reset.addEventListener()
+
+
+
+
+</script>
+
+</body>
+</html>
