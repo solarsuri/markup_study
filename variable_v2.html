@@ -1,4 +1,4 @@
-<!-- Learn about this code on MDN: https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/A_first_splash -->
+<!-- Learn about this code on MDN: https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Variables -->
 
 <!DOCTYPE html>
 <html>
@@ -62,18 +62,19 @@
 
 <script>
     var geval = eval;
-
     function createInput() {
         var inputDiv = document.createElement('div');
         var inputPara = document.createElement('p');
         var inputForm = document.createElement('input');
+        // createElement로 태그를 생성!!
 
         inputDiv.setAttribute('class','input');
         inputPara.textContent = '>';
         inputDiv.appendChild(inputPara);
         inputDiv.appendChild(inputForm);
+        // appendChild로 태그를 뒤에 붙여줌
+
         document.body.appendChild(inputDiv);
-        inputDiv.focus();
 
         inputForm.addEventListener('change', executeCode);
     }

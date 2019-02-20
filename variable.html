@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>변수</title>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+<!--필요한 정보를 저장하기 - 변수-->
+<!--https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Variables-->
+
+
+<!--
+
+  변수
+: 숫자 또는 문자열과 같은 값의 컨테이너임
+변수의 특징 - 포함된 값이 변경될 수 있다.
+
+-->
+
+<!--
+
+  변수의 종류
+: 숫자 / 문자열 / 불리언(true, false) / 배열 / 객체
+
+  * 객체란
+  var dog = { name: 'spot', breed: 'dolmation' };
+  객체에 저장된 정보를 검색하기 위해 아래와 같은 구문을 사용함
+  dog.name
+
+-->
+
+
+
+
+
+<button>press me</button>
+
+
+<script>
+
+  var button = document.querySelector('button');
+  button.onclick = function () {
+      var name = prompt('what is your name?');
+      alert('hello ' + name + ', nice to see you!!');
+  }
+
+
+</script>
+
+</body>
+</html>
