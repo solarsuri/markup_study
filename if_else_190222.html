@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>변수</title>
+
+  <style>
+    /*https://developer.mozilla.org/ko/docs/Learn/JavaScript/Building_blocks/%EC%A1%B0%EA%B1%B4%EB%AC%B8*/
+  </style>
+</head>
+
+<body>
+
+
+<label for="weather">select the weather type today:</label>
+<select id="weather">
+  <option value="">make a choice</option>
+  <option value="sunny">sunny</option>
+  <option value="rainy">Rainy</option>
+  <option value="snowing">Snowing</option>
+  <option value="overcast">Overcast</option>
+</select>
+
+<p></p>
+
+
+<script>
+
+// if(condition){
+//     code to run if condition is true
+// }else{
+//     run some other code instead
+// }
+
+
+
+// if ...else문
+//   var shoppingDone = false;
+//
+//   if(shoppingDone === true){
+//       var childAllowance = 10;
+//   }else{
+//       var childAllowance = 5;
+//   }
+
+
+
+// else if
+var select = document.querySelector('select');
+var para = document.querySelector('p');
+
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+    var choice = select.value;
+
+    if (choice === 'sunny') {
+        para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+    } else if (choice === 'rainy') {
+        para.textContent = 'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.';
+    } else if (choice === 'snowing') {
+        para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+    } else if (choice === 'overcast') {
+        para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+    } else {
+        para.textContent = '';
+    }
+}
+
+
+// if ...else 중첩
+if (choice === 'sunny') {
+    if (temperature < 86) {
+        para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+    } else if (temperature >= 86) {
+        para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some suncream on.';
+    }
+}
+
+
+// 멀티 케이스
+var foo = 1;
+var output = 'Output: ';
+switch (foo) {
+    case 0:
+        output += 'So ';
+    case 1:
+        output += 'What ';
+        output += 'Is ';
+    case 2:
+        output += 'Your ';
+    case 3:
+        output += 'Name';
+    case 4:
+        output += '?';
+        console.log(output);
+        break;
+    case 5:
+        output += '!';
+        console.log(output);
+        break;
+    default:
+        console.log('Please pick a number from 0 to 5!');
+}
+
+
+
+
+// block-scope  switch
+const action = 'say_hello';
+switch (action){
+    case 'say_hello':
+        let message = 'hello';
+        console.log(message);
+        break;
+    case 'say_hi':
+        let message = 'hi';
+        console.log(message);
+        break;
+    default:
+        console.log('empty action received.');
+        break;
+}
+
+
+
+const action = 'say_hello';
+switch (action) {
+    case 'say_hello': { // added brackets
+        let message = 'hello';
+        console.log(message);
+        break;
+    } // added brackets
+    case 'say_hi': { // added brackets
+        let message = 'hi';
+        console.log(message);
+        break;
+    } // added brackets
+    default: { // added brackets
+        console.log('Empty action received.');
+        break;
+    } // added brackets
+}
+
+
+
+
+// let은 변수가 선언된 블록, 구문 또는 표현식 내에서만 유효한 변수를 선언함.
+// 이는 var 키워드가 블록 범위를 무시하고 전역 변수나 함수 지역 변수로 선언되는 것과 다른 점이다.
+
+function varTest() {
+    var x = 1;
+    if(true){
+        var x =2; // 상위 블록과 같은 변수!
+        console.log(x); // 2
+    }
+    console.log(x); // 2
+}
+
+function letTest() {
+    let x = 1;
+    if(true){
+        let x = 2;  // 상위 블록과 다른 변수
+        console.log(x); // 2
+    }
+    console.log(x); // 1
+}
+
+
+// 프로그램이나 함수의 최상위에서는 let과 var은 서로 다르게 행동함!!!!!!!!!!!!!!!!!!!
+// let은 전역 객체의 속성 값을 생성하지 않는다.
+
+var x = 'global';
+let y = 'global';
+console.log(this.x);  // "global" 전역 객체의 속성 x를 생성
+console.log(this.y);  // undefined 전역 객체의 속성 y를 생성하지 않음
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
