@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>MDN JS 기본</title>
+
+  <style>
+    img{
+      width: 60px;
+    }
+    .ex{
+      padding-top: 15px;
+    }
+    h5{
+      color: #039cf5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h3>자바스크립트 기본</h3>
+  <h4>
+    <a href="https://developer.mozilla.org/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics">스터디 링크</a>
+  </h4>
+
+  <div class="ex ex1">
+    <h5>(ex1) 조건문</h5>
+    <img src="img/chrome.png" alt="크롬">
+  </div>
+
+  <div class="ex ex2">
+    <h5>(ex2) 함수</h5>
+    <h1>kk</h1>
+  </div>
+
+  <div class="ex ex3">
+    <h5>(ex3) 개인화된 환영 메시지 추가하기</h5>
+    <button>Change User</button>
+  </div>
+
+<script>
+    // ex1 이미지 변경자 추가하기
+  var myImage = document.querySelector('img');
+
+  myImage.onclick = function () {
+      var mySrc = myImage.getAttribute('src');
+      if(mySrc === 'img/chrome.png'){
+          myImage.setAttribute('src','img/firefox1.jpg');
+      }else{
+          myImage.setAttribute('src','img/firefox2.png');
+      }
+  }
+
+    // ex2 함수
+ // var myVariable = document.querySelector('h1');
+ // alert('hello');
+
+    // ex3 개인화된 환영 메시지 추가하기
+    var myButton = document.querySelector('button');
+    var myHeading = document.querySelector('h1');
+    function setUserName() {
+        var myName = prompt('Please enter your name.');
+        localStorage.setItem('name', myName);
+        myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+    }
+    if(!localStorage.getItem('name')){
+        setUserName();
+    }else{
+        var storedName = localStorage.getItem('name');
+        myHeading.innerHTML = 'Mozilla is cool,' + storedName;
+    }
+    myButton.onclick = function () {
+        setUserName();
+    }// 마지막으로 onclick 이벤트 핸들러를 버튼에 추가해 클릭될 때 setUserName() 함수가 실행되도록 함
+
+</script>
+
+</body>
+</html>

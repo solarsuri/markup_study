@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>ui tab 2</title>
+
+  <style>
+    .container{
+      width: 500px;
+      margin: 0 auto;
+    }
+    ul.tabs{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul.tabs li{
+      background: none;
+      color: #2222;
+      display: inline-block;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    ul.tabs li.current{
+      background: #ededed;
+      color: #222;
+    }
+    .tab-cont{
+      display: none;
+      background: #ededed;
+      padding: 15px;
+    }
+    .tab-cont.current{
+      display: inherit;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <ul class="tabs">
+      <li class="tab-link current" data-tab="tab-1">메뉴_하나</li>
+      <li class="tab-link" data-tab="tab-2">메뉴_둘</li>
+      <li class="tab-link" data-tab="tab-3">메뉴_셋</li>
+    </ul>
+    <div id="tab-1" class="tab-cont current">내용 하나</div>
+    <div id="tab-2" class="tab-cont">내용 둘</div>
+    <div id="tab-3" class="tab-cont">내용 셋</div>
+  </div> <!--container-->
+
+
+
+<script>
+
+  $(document).ready(function () {
+      $("ul.tab li").click(function () {
+          var tab_id = $(this).attr('data-tab');
+
+          $("ul.tabs li").removeClass("current");
+          $(".tab-cont").removeClass("current");
+
+          $(this).addClass("current");
+          $("#" + tab_id).addClass("current");
+      })
+  })
+
+</script>
+
+</body>
+</html>
