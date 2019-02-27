@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>flex</title>
+
+  <style>
+    .container {
+      font-family: arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .flex {
+      background: #6AB6D8;
+      padding: 10px;
+      margin-bottom: 50px;
+      border: 3px solid #2E86BB;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .flex:after {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 100%;
+      margin-top: 10px;
+      width: 100%;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .flex1 {
+      flex-basis: auto;
+    }
+
+    .flex1:after {
+      content: 'auto';
+    }
+
+    .flex2 {
+      flex-basis: max-content;
+    }
+
+    .flex2:after {
+      content: 'max-content';
+    }
+
+    .flex3 {
+      flex-basis: min-content;
+    }
+
+    .flex3:after {
+      content: 'min-content';
+    }
+
+    .flex4 {
+      flex-basis: fit-content;
+    }
+
+    .flex4:after {
+      content: 'fit-content';
+    }
+
+    .flex5 {
+      flex-basis: content;
+    }
+
+    .flex5:after {
+      content: 'content';
+    }
+
+    .flex6 {
+      flex-basis: fill;
+    }
+
+    .flex6:after {
+      content: 'fill';
+    }
+
+    /*ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ*/
+
+    #content {
+      display: flex;
+      width: 500px;
+    }
+
+    #content div {
+      flex-basis: 120px;
+      border: 3px solid rgba(0, 0, 0, .2);
+    }
+
+    .box {
+      flex-shrink: 1;
+    }
+
+    .box1 {
+      flex-shrink: 2;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+<!--flex의 특성-->
+
+<!--
+
+" 자동 사이즈 조정 "
+" 너비 "
+
+flex
+flex-basis
+flex-direction
+flex-flow
+flex-grow
+flex-shrink
+flex-wrap
+order
+-->
+
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+
+
+<!--ㅇㅇㅇㅇㅇㅇㅇ-->
+
+<p>The width of content is 500px; the flex-basis of the flex items is 120px.</p>
+<p>A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set</p>
+<p>The width of D and E is less than the others.</p>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+</div>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
