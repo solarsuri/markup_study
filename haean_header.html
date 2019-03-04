@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel=”stylesheet” href=”css/jquery-ui.css”>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <title>해안건 header_ui</title>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div>
+    <h1><a href="/"><img src="/ko/images/common/logo.png" alt="HAEAHN"></a></h1>
+
+    <!-- gnb -->
+    <ul class="gnb">
+      <li class="">
+        <!--<a href="javascript:serviceClick()">SERVICE</a>-->
+        <a href="">SERVICE</a>
+        <div class="sub-depth01" style="height: 0px;">
+          <ul>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=3">사업계획</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=2">건축설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=4">도시설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=35">의료시설설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=6">상환경설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=7">조경설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=8">인테리어설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=5">녹색건축설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=1">BIM설계</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=9">CM엔지니어링</a></li>
+
+            <li><a href="/ko/service/detail.do?prjctServiceSeq=10">리노베이션</a></li>
+
+          </ul>
+        </div>
+      </li>
+      <li class="">
+        <a href="/ko/project/list.do">PROJECT</a>
+        <div class="sub-depth02" style="height: 0px;">
+          <ul>
+            <li><a href="/ko/project/list.do">ALL</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=7">주거단지</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=6">주거복합</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=9">상업시설</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=8">업무시설</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=2">문화/전시시설</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=5">연구/병원/교육시설</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=4">특수시설</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=3">호텔/리조트</a></li>
+
+            <li><a href="/ko/project/list.do?prjctUseSeq=1">도시설계</a></li>
+
+          </ul>
+        </div>
+      </li>
+      <li class="">
+        <a href="/ko/about/overview.do">ABOUT</a>
+        <div class="sub-depth03" style="height: 0px;">
+          <ul>
+            <li><a href="/ko/about/overview.do">OVERVIEW</a></li>
+            <li><a href="/ko/about/way.do">해안웨이</a></li>
+            <li>
+              <a href="/ko/about/member.do">임원소개</a>
+            </li>
+            <li><a href="/ko/about/history.do">회사연혁</a></li>
+            <li>
+              <!-- 								<a href="/about/client.do">해안고객</a> -->
+            </li>
+            <li><a href="/ko/about/award.do">수상작품</a></li>
+            <li><a href="/ko/about/recruit.do">인재채용</a></li>
+            <li><a href="/ko/about/news.do">NEWS</a></li>
+            <li><a href="/ko/about/promote.do">홍보물</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="">
+        <a href="/ko/contact/contact.do">CONTACT</a>
+      </li>
+    </ul>
+    <p class="gnb-underbar" style="left: 1361px; width: 56px; overflow: hidden;"></p>
+    <!-- //gnb -->
+
+    <!-- top-search -->
+    <form name="allSearchForm" id="allSearchForm" method="get" onsubmit="return false;">
+      <div class="top-search">
+        <fieldset>
+          <legend>검색하기</legend>
+          <div><input type="text" name="searchKeyword" id="searchKeyword" value="Search" onfocus="this.value=''" title="검색어를 입력해 주십시오">
+            <input type="hidden" name="searchCondition" id="searchCondition" value="0">
+            <input type="hidden" name="searchType" id="searchType" value="0">
+          </div>
+          <button onclick="allSearch()"><img src="/ko/images/common/top_btn_search.png" alt="검색"></button>
+        </fieldset>
+      </div>
+    </form>
+    <!-- top-search -->
+  </div>
+
+</header>
+
+<script>
+
+</script>
+
+</body>
+</html>

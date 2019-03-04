@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel=”stylesheet” href=”css/jquery-ui.css”>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <title>슈프리마 header_ui</title>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+<header id="header" class="main_header">
+  <h1 id="logo"><a href="/ko/main.asp" target="_top">SUPREMA</a></h1>
+  <div id="gnb_container">
+    <ul class="gnb">
+      <li class="label"><a href="/ko/hardware/product.asp"><span>제품정보</span></a>
+        <!-- 2단메뉴 -->
+        <div class="sn_container">
+          <div class="sn_inner">
+            <dl class="sn1_1">
+              <dt><a herf="/ko/platform/biostar-2.asp">플랫폼</a></dt>
+              <dd class="product_img"><a href="/ko/platform/biostar-2.asp"><img src="/ko/asset/images/common/sn_img_01.jpg" alt=""></a></dd>
+              <dd><a href="/ko/platform/biostar-2.asp">BioStar 2 소개</a></dd>
+              <dd><a href="/ko/platform/biostar-2-centralized-system.asp">BioStar 2 AC (중앙 집중형 시스템)</a></dd>
+              <dd><a href="/ko/platform/biostar-2-distributed-system.asp">BioStar 2 AC (분산형 시스템)</a></dd>
+              <dd><a href="/ko/platform/biostar-2-ta.asp">BioStar 2 TA</a></dd>
+              <dd><a href="/ko/platform/biostar-2-mobile.asp">BioStar 2 Mobile</a></dd>
+              <dd><a href="/ko/platform/biostar-2-mobilecard.asp">BioStar 2 Mobile Card </a></dd>
+            </dl>
+            <span class="line"></span>
+            <dl class="sn1_2">
+              <dt>하드웨어</dt>
+              <dd class="product_img"><a href="#n"><img src="/ko/asset/images/common/sn_img_02.jpg" alt=""></a></dd>
+              <!-- <dd><a href="/ko/hardware/product.asp">제품 탐색기</a></dd> -->
+              <dd>
+                <a href="/ko/hardware/product_biometric.asp" class="sn_dep2">바이오인식 장치</a>
+                <!-- 3단메뉴 -->
+                <div class="sn_dep3">
+                  <ul>
+                    <li><a href="/ko/hardware/bio_facestation2.asp">FaceStation 2</a></li>
+                    <li><a href="/ko/hardware/bio_biostation-a2.asp">BioStation A2</a></li>
+                    <li><a href="/ko/hardware/bio_biostation-2.asp">BioStation 2</a></li>
+                    <li><a href="/ko/hardware/bio_biostation-l2.asp">BioStation L2</a></li>
+                    <li><a href="/ko/hardware/bio_biolite-n2.asp">BioLite N2</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="/ko/hardware/bio_bioentry-w2.asp">BioEntry W2</a></li>
+                    <li><a href="/ko/hardware/bio_bioentry-p2.asp">BioEntry P2</a></li>
+                    <li><a href="/ko/hardware/bio_bioentry-r2.asp">BioEntry R2</a></li>
+                  </ul>
+                </div>
+              </dd>
+              <dd>
+                <a href="/ko/hardware/product_rfid.asp" class="sn_dep2">RFID 장치</a>
+                <!-- 3단메뉴 -->
+                <div class="sn_dep3">
+                  <ul>
+                    <li><a href="/ko/hardware/rfid_x-station.asp">X-Station</a></li>
+                    <li><a href="/ko/hardware/rfid_xpass.asp">Xpass</a></li>
+                    <li><a href="/ko/hardware/rfid_xpass-s2.asp">Xpass S2</a></li>
+                    <li><a href="/ko/hardware/rfid_xpass-d2.asp">XPass D2</a></li>
+                  </ul>
+                </div>
+              </dd>
+              <dd>
+                <a href="/ko/hardware/product_controller.asp" class="sn_dep2">지능형 컨트롤러</a>
+                <!-- 3단메뉴 -->
+                <div class="sn_dep3">
+                  <ul>
+                    <li><a href="/ko/hardware/ic_corestation.asp">CoreStation</a></li>
+                  </ul>
+                </div>
+              </dd><!--intelligent-controller-->
+              <dd>
+                <a href="/ko/hardware/product_peripheral.asp" class="sn_dep2">주변 장치</a>
+                <!-- 3단메뉴 -->
+                <div class="sn_dep3">
+                  <ul>
+                    <li><a href="/ko/hardware/pd_secure-io-2.asp">Secure I/O 2</a></li>
+                    <li><a href="/ko/hardware/pd_om-120.asp">OM-120</a></li>
+                    <li><a href="/ko/hardware/pd_dm-20.asp">DM-20</a></li>
+                    <li><a href="/ko/hardware/pd_encr-10.asp">ENCR-10</a></li>
+                  </ul>
+                </div>
+              </dd><!--peripheral-device-->
+              <dd>
+                <a href="/ko/hardware/eol_notice-list.asp" class="sn_dep2">단종 제품</a>
+                <!-- 3단메뉴 -->
+                <div class="sn_dep3">
+                  <ul>
+                    <li><a href="/ko/hardware/eol_biostar-1.asp">BioStar 1</a></li>
+                    <li><a href="/ko/hardware/eol_facestation.asp">FaceStation</a></li>
+                    <li><a href="/ko/hardware/eol_biostation.asp">BioStation</a></li>
+                    <li><a href="/ko/hardware/eol_biostation-t2.asp">BioStation T2</a></li>
+                    <li><a href="/ko/hardware/eol_biolite-net.asp">BioLite Net</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="/ko/hardware/eol_bioentry-w.asp">BioEntry W</a></li>
+                    <li><a href="/ko/hardware/eol_bioentry-plus.asp">BioEntry Plus</a></li>
+                    <li><a href="/ko/hardware/eol_biolite-solo.asp">BioLite Solo</a></li>
+                    <li><a href="/ko/hardware/eol_secure-io.asp">Secure I/O</a></li>
+                    <li><a href="/ko/hardware/eol_lift-io.asp">Lift I/O</a></li>
+                  </ul>
+                </div>
+              </dd><!--end-of-line-->
+            </dl>
+          </div>
+          <a href="/ko/hardware/product_selector.asp" class="shorcut"><span>제품 탐색기&nbsp;&nbsp;<img src="/ko/asset/images/common/icon-arrow-right7.png" alt=""></span></a>
+        </div>
+      </li>
+      <li class="label"><a href="/ko/solutions/main.asp"><span>솔루션</span></a>
+        <!-- 2단메뉴 -->
+        <div class="sn_container">
+          <div class="sn_inner">
+            <dl class="sn1_1">
+              <dt>산업 분야</dt>
+              <dd class="product_img"><a href="#n"><img src="/ko/asset/images/main/menu_solution_01.jpg" alt=""></a></dd>
+              <dd><a href="/ko/solutions/construction.asp">건설</a></dd>
+              <dd><a href="/ko/solutions/data-center.asp">데이터센터</a></dd>
+              <dd><a href="/ko/solutions/healthcare.asp">의료</a></dd>
+              <!--<dd><a href="/ko/solutions/">은행</a></dd>-->
+              <dd><a href="/ko/solutions/commercial.asp">상업(사무실)</a></dd>
+              <dd><a href="/ko/solutions/infrastructure.asp">기반 시설</a></dd>
+              <dd><a href="/ko/solutions/manufacturing.asp">제조</a></dd>
+            </dl>
+            <span class="line"></span>
+            <dl class="sn1_2">
+              <dt>적용 분야</dt>
+              <dd class="product_img"><a href="#n"><img src="/ko/asset/images/main/menu_solution_02.jpg" alt=""></a></dd>
+              <dd><a href="/ko/solutions/access-control.asp">출입통제</a></dd>
+              <dd><a href="/ko/solutions/time-attendance.asp">근태관리</a></dd>
+              <dd><a href="/ko/solutions/mobile-credential.asp">모바일 사원증</a></dd>
+              <dd><a href="/ko/solutions/facial-recognition.asp">얼굴 인식</a></dd>
+              <dd><a href="/ko/solutions/biosign.asp">모바일 인증 솔루션</a></dd>
+              <dd><a href="/ko/solutions/privacy-protection.asp">개인 정보 보호</a></dd>
+            </dl>
+          </div>
+        </div>
+      </li>
+      <li class="label"><a href="/ko/support/main.asp"><span>고객지원</span></a>
+        <!-- 2단메뉴 -->
+        <div class="sn_container">
+          <div class="sn_inner">
+            <dl class="solution_sn">
+              <dt>고객센터</dt>
+              <dd><a href="/ko/support/customer-center-reception.asp">접수방법</a></dd>
+              <dd><a href="/ko/support/customer-center-service-charge.asp">서비스 요금 및 보증기간</a></dd>
+              <dd><a href="/ko/support/customer-center-faq.asp">자주 묻는 질문(FAQ)</a></dd>
+              <dd><a href="http://367.co.kr/" target="_blank">원격지원</a></dd>
+            </dl>
+            <dl class="solution_sn">
+              <dt>제품자료</dt>
+              <dd><a href="/ko/support/biostar-2-pakage.asp" target="_blank">BioStar 2 패키지</a></dd>
+              <dd><a href="/ko/support/technical-resources.asp?sKIND_TYPE=CM00301">펌웨어</a></dd>
+              <dd><a href="/ko/support/technical-resources.asp?sKIND_TYPE=CM00302">매뉴얼</a></dd>
+              <dd><a href="/ko/support/technical-resources.asp?sKIND_TYPE=CM00303">인증서</a></dd>
+            </dl>
+            <dl class="solution_sn">
+              <dt>마케팅 자료</dt>
+              <dd><a href="/ko/support/marketing-materials.asp?sKIND_TYPE=CM00401">브랜드 가이드라인</a></dd>
+              <dd><a href="/ko/support/marketing-materials.asp?sKIND_TYPE=CM00402">브로슈어</a></dd>
+              <dd><a href="/ko/support/marketing-materials.asp?sKIND_TYPE=CM00403">제품 이미지</a></dd>
+              <dd><a href="/ko/support/marketing-materials.asp?sKIND_TYPE=CM00404">전시회 디자인</a></dd>
+              <dd><a href="/ko/support/marketing-materials.asp?sKIND_TYPE=CM00405">배경화면</a></dd>
+            </dl>
+            <dl class="solution_sn">
+              <dt>개발자 도구</dt>
+              <dd><a href="/ko/support/development-tools_biostar-2-api.asp">BioStar 2 API</a></dd>
+              <dd><a href="/ko/support/development-tools_biostar-2-api.asp">BioStar 2 SDK</a></dd>
+            </dl>
+            <dl class="solution_sn">
+              <dt>학습</dt>
+              <dd><a href="http://kb.supremainc.com/home/doku.php?id=ko:start" target="_blank">지식 베이스</a></dd>
+            </dl>
+          </div>
+        </div>
+      </li>
+      <li class="label"><a href="/ko/about/suprema.asp"><span>슈프리마 소개</span></a>
+        <!-- 2단메뉴 -->
+        <div class="sn_container">
+          <div class="sn_inner_suprema">
+            <dl class="sn1_1">
+              <dt>슈프리마</dt>
+              <dd><a href="/ko/about/suprema.asp">회사소개</a></dd>
+              <dd><a href="/ko/about/customer-value.asp">고객 가치</a></dd>
+              <dd><a href="/ko/about/ci.asp">CI</a></dd>
+              <dd><a href="/ko/about/news-list.asp">보도자료</a></dd>
+              <dd><a href="/ko/about/event-list.asp">이벤트</a></dd>
+              <dd><a href="/ko/about/contact-us.asp">문의하기</a></dd>
+              <dd><a href="/ko/about/philosophy.asp">HR</a></dd>
+            </dl>
+            <dl class="sn1_2">
+              <dt>IR</dt>
+              <dd><a href="/ko/about/ir.asp">IR 자료</a></dd>
+              <dd><a href="/ko/about/notice.asp">공시</a></dd>
+              <dd><a href="/ko/about/announcement-list.asp">공고</a></dd>
+              <dd><a href="/ko/about/finance-data.asp">재무정보</a></dd>
+            </dl>
+            <img src="/ko/asset/images/main/bg_suprema.jpg" alt="" class="suprema_img">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="top_odd">
+    <a href="/ko/about/contact-us.asp">문의하기&nbsp;&nbsp;&nbsp;<img src="/ko/asset/images/common/header_bar.png" alt=""></a>
+    <div class="selectBox">
+      <span class="txt">Korea/한국어</span>
+      <label for="search" class="screen_out">검색분류선택</label>
+      <ul id="search" class="select">
+        <li><a href="/en/main.asp">Global/English</a></li>
+        <li><a>Korea/한국어</a></li>
+
+
+      </ul>
+    </div>
+
+  </div>
+  <div id="side_menu_container">
+    <form name="frmTopSearch" action="/ko/util/search.asp" method="post" style="margin:0px;">
+      <div class="all_search_container">
+        <input type="text" name="sKeyword" value="" placeholder="검색어 입력">
+        <a href="#n" class="btn_all_search"></a>
+        <a href="#n" onclick="document.frmTopSearch.submit();" class="on"></a>
+        <a href="#n" class="btn_search_close"></a>
+      </div>
+    </form>
+    <a href="/embedded-modules/ko/main.asp" target="_blank" class="btn_em_mode">지문 인식 모듈</a>
+  </div>
+</header>
+
+<script>
+
+</script>
+
+</body>
+</html>
