@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel=”stylesheet” href=”css/jquery-ui.css”>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <title>솔라커넥트 헤더</title>
+
+  <style>
+
+    .wrap{
+      position: relative;
+      min-height: 100%;
+      color: #1a1a1a;
+    }
+    .navbar{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      min-height: 76px;
+    }
+
+    .navbar-top{
+      display: flex;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding-right: 16px;
+    }
+    .navbar-header{
+
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+  <nav class="navbar navbar-default">
+    <div class="navbar-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="true">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="/img/ci-new.svg" width="225" height="36" alt="SolarConnect"></a>
+      </div>
+      <div class="navbar-collapse collapse in" id="myNavbar" aria-expanded="true" style="">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown  "><a href="/finance" class="dropdown-toggle" data-toggle="dropdown"><span>금융</span></a>
+            <ul class="dropdown-menu dropdown-menu-left drop_type1">
+              <li><a href="/finance"><em class="visible-xs-inline">- </em>태양광 금융</a></li>
+              <!--            <li><a href="/bridge"><em class="visible-xs-inline">- </em>브리지론</a></li>-->
+            </ul>
+          </li>
+          <li class="dropdown      "><a href="/consulting" class="dropdown-toggle disabled"
+                                        data-toggle="dropdown"><span>사업개발</span></a>
+            <ul class="dropdown-menu dropdown-menu-left drop_type2">
+              <li class=""><a href="/consulting"><span><em class="visible-xs-inline">- </em>사업 자문</span></a></li>
+              <li class=""><a href="/fs"><span><em class="visible-xs-inline">- </em>타당성 검토</span></a></li>
+              <li class=""><a href="/house"><span><em class="visible-xs-inline">- </em>주택용 태양광</span></a></li>
+              <li class=""><a href="/product"><span><em class="visible-xs-inline">- </em>모듈 · 인버터</span></a></li>
+              <li class=""><a href="/structure"><span><em class="visible-xs-inline">- </em>구조물 시공</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown  "><a href="/owners" class="dropdown-toggle disabled"
+                                    data-toggle="dropdown"><span>태양광 투자</span></a>
+            <ul class="dropdown-menu dropdown-menu-left drop_type3">
+              <li class=""><a href="/owners"><span><em class="visible-xs-inline">- </em>Owners Program</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown  "><a href="/dr" class="dropdown-toggle" data-toggle="dropdown"><span>DR</span></a>
+            <ul class="dropdown-menu dropdown-menu-left drop_type3">
+              <li class=""><a href="/dr"><span><em class="visible-xs-inline">- </em>DR</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown    "><a href="/company" class="dropdown-toggle"
+                                      data-toggle="dropdown"><span>회사소개</span></a>
+            <ul class="dropdown-menu dropdown-menu-left drop_type4">
+              <li class=""><a href="/company"><span><em class="visible-xs-inline">- </em>회사소개</span></a></li>
+              <li class=""><a href="/recruit"><span><em class="visible-xs-inline">- </em>인재채용</span></a></li>
+              <li class=""><a href="/notice"><span><em class="visible-xs-inline">- </em>공지사항</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown nav_btn_type2">
+            <a href="#" class="nav_setting dropdown-toggle" data-toggle="dropdown"><span>설정</span></a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="https://admin.solarconnect.kr" target="_blank">관리자 바로가기</a></li>
+              <li><a href="/users">내 프로젝트</a></li>
+              <li><a href="/users/edit">계정설정</a></li>
+              <li><a href="/users/sign_out">로그아웃</a></li>
+            </ul>
+          </li>
+          <li class="nav_btn_type2">
+            <!--          <a href="" class="nav_my"><span>내 프로젝트</span></a>-->
+            <a href="https://biz.solarconnect.kr" target="_blank"><span>비즈니스</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
