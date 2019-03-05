@@ -23,7 +23,7 @@
       width: 100%;
       z-index: 100;
       min-height: 76px;
-      background: #eee;
+      background: #33a0ff;
     }
 
     .navbar-top{
@@ -63,24 +63,31 @@
     .navbar-nav > li{
       flex: 1;
       list-style: none;
-      background-color: #eee;
+      text-align: center;
+      word-break: keep-all;
     }
     .navbar-nav > li a{
-      padding: 28px 0;
+      padding: 6px;
       text-decoration: none;
-      color: #1a1a1a;
+      color: rgba(255,255,255,0.8);
+
     }
     .navbar-default .navbar-nav>li>a span{
       position: relative;
       display: inline-block;
     }
-    .dropdown-menu>li{
+    .dropdown-menu > li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       min-height: 35px;
+      background-color: #1b1e21;
+      border-bottom: 1px solid #ccc;
     }
     .navbar-nav>li>.dropdown-menu{
       margin-top: 10px;
       margin-left: 8px;
-      min-width: 90px;
+      min-width: 100px;
       padding: 0;
     }
     .dropdown-menu{
@@ -90,9 +97,28 @@
       display: none !important;
     }
 
-
-
-
+    .navbar-default .nav_btn_type2 .nav_setting span{
+      overflow: hidden;
+      width: 25px;
+      height: 25px;
+      background-image: url(img/ic-setting.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 15px 15px;
+      color: transparent;
+    }
+    .navbar-nav>li>.dropdown-menu.dropdown-menu-right{
+      margin-top: 0;
+    }
+    .navbar-default .nav_btn_type2>a>span{
+      background-color: #fff;
+    }
+    .navbar-default .nav_btn_type2>a.biz>span{
+      padding: 3px 8px;
+    }
+    .navbar-nav > li a.biz{
+      color: #333;
+    }
 
 
   </style>
@@ -113,13 +139,13 @@
       </div>
       <div class="navbar-collapse collapse in" id="myNavbar" aria-expanded="true" style="">
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown  "><a href="/finance" class="dropdown-toggle" data-toggle="dropdown"><span>금융</span></a>
+          <li class="dropdown" id="navMenu"><a href="/finance" class="dropdown-toggle" data-toggle="dropdown"><span>금융</span></a>
             <ul class="dropdown-menu dropdown-menu-left drop_type1">
               <li><a href="/finance"><em class="visible-xs-inline">- </em>태양광 금융</a></li>
               <!--            <li><a href="/bridge"><em class="visible-xs-inline">- </em>브리지론</a></li>-->
             </ul>
           </li>
-          <li class="dropdown      "><a href="/consulting" class="dropdown-toggle disabled"
+          <li class="dropdown" id="navMenu"><a href="/consulting" class="dropdown-toggle disabled"
                                         data-toggle="dropdown"><span>사업개발</span></a>
             <ul class="dropdown-menu dropdown-menu-left drop_type2">
               <li class=""><a href="/consulting"><span><em class="visible-xs-inline">- </em>사업 자문</span></a></li>
@@ -129,18 +155,18 @@
               <li class=""><a href="/structure"><span><em class="visible-xs-inline">- </em>구조물 시공</span></a></li>
             </ul>
           </li>
-          <li class="dropdown  "><a href="/owners" class="dropdown-toggle disabled"
+          <li class="dropdown" id="navMenu"><a href="/owners" class="dropdown-toggle disabled"
                                     data-toggle="dropdown"><span>태양광 투자</span></a>
             <ul class="dropdown-menu dropdown-menu-left drop_type3">
               <li class=""><a href="/owners"><span><em class="visible-xs-inline">- </em>Owners Program</span></a></li>
             </ul>
           </li>
-          <li class="dropdown  "><a href="/dr" class="dropdown-toggle" data-toggle="dropdown"><span>DR</span></a>
+          <li class="dropdown" id="navMenu"><a href="/dr" class="dropdown-toggle" data-toggle="dropdown"><span>DR</span></a>
             <ul class="dropdown-menu dropdown-menu-left drop_type3">
               <li class=""><a href="/dr"><span><em class="visible-xs-inline">- </em>DR</span></a></li>
             </ul>
           </li>
-          <li class="dropdown    "><a href="/company" class="dropdown-toggle"
+          <li class="dropdown" id="navMenu"><a href="/company" class="dropdown-toggle"
                                       data-toggle="dropdown"><span>회사소개</span></a>
             <ul class="dropdown-menu dropdown-menu-left drop_type4">
               <li class=""><a href="/company"><span><em class="visible-xs-inline">- </em>회사소개</span></a></li>
@@ -148,8 +174,8 @@
               <li class=""><a href="/notice"><span><em class="visible-xs-inline">- </em>공지사항</span></a></li>
             </ul>
           </li>
-          <li class="dropdown nav_btn_type2">
-            <a href="#" class="nav_setting dropdown-toggle" data-toggle="dropdown"><span>설정</span></a>
+          <li class="dropdown nav_btn_type2" id="navMenu">
+            <a href="#" class="nav_setting dropdown-toggle" data-toggle="dropdown" style="margin-left: 70px;"><span>설정</span></a>
             <ul class="dropdown-menu dropdown-menu-right">
               <li><a href="https://admin.solarconnect.kr" target="_blank">관리자 바로가기</a></li>
               <li><a href="/users">내 프로젝트</a></li>
@@ -159,7 +185,7 @@
           </li>
           <li class="nav_btn_type2">
             <!--          <a href="" class="nav_my"><span>내 프로젝트</span></a>-->
-            <a href="https://biz.solarconnect.kr" target="_blank"><span>비즈니스</span></a>
+            <a href="https://biz.solarconnect.kr" target="_blank" class="biz"><span>비즈니스</span></a>
           </li>
         </ul>
       </div>
@@ -168,6 +194,15 @@
 </div>
 
 <script>
+
+  var nav = document.getElementById("navMenu");
+  var list = document.getElementsByClassName("dropdown-menu");
+
+
+
+
+
+
 
 </script>
 
