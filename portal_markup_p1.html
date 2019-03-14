@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css">
 
   <title>M PJT 1 - portal markup</title>
 
@@ -12,7 +13,6 @@
     #header {
       width: 100%;
       height: 170px;
-      background: #eee;
     }
 
     fieldset {
@@ -22,6 +22,15 @@
       margin: 20px auto;
       padding: 0;
       border: none;
+    }
+
+    li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+      font-size: 12px;
     }
 
     .area_top {
@@ -89,20 +98,90 @@
 
     /*콘텐츠 스타일*/
 
-    .content{
+    .content {
       width: 100%;
     }
-    .content:after{
+
+    .content:after {
       display: block;
       clear: both;
 
       height: 100%;
     }
 
-    .wrap{
+    .wrap {
+      display: flex;
       width: 1080px;
       margin: auto;
     }
+
+    /*left*/
+
+    .left_con{
+      flex: 0.5 auto;
+    }
+
+
+
+    /*뉴스영역*/
+    .news_stand{
+      border: 1px solid #ccc;
+    }
+    .news_wrap{
+      padding: 9px 0 0 14px;
+    }
+    .press_header{
+      position: relative;
+      height: 24px;
+    }
+    .p_title{
+      display: inline-block;
+    }
+    .edit_date{
+      flex: 1;
+      font-size: 11px;
+      color: #666;
+      padding-left: 10px;
+    }
+    .apln_btn_subscribe{
+      flex: 1;
+    }
+
+
+    .apln_news_thumb {
+      position: relative;
+    }
+    .apln_nt_thumbwrap{
+      padding: 12px 0 0;
+    }
+
+    .apln_nt_thumb{
+
+    }
+    .area_newsstand .thumb_bd{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border: 1px solid #000;
+    }
+    .apln_nt_textwrap{
+      width: 168px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      height: 30px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 10px 11px;
+      line-height: 18px;
+    }
+    .apln_nt_bg{
+
+    }
+
 
 
 
@@ -158,13 +237,87 @@
 <!--헤더-->
 
 
-
 <div class="content">
   <div class="wrap">
 
     <div class="left_con">
-      <div class="news">ssss</div><!--news-->
+      <div class="news_cast">
+        <div class="news_stand">
+          <div class="news_wrap">
+            <div class="press_header">
+              <h3 class="p_title">
+                <a href="#" class="apln_tlink" target="_blank"
+                   data-custom-clk="nsd_myn*a.logo"><img
+                        src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145214517.png" height="24"
+                        alt="머니투데이" class="api_logo"></a>
+              </h3>
+              <span class="edit_date">
+                <span class="time">2019.03.14</span>편집
+              </span><!--edit_date-->
+              <div class="apln_btn_wrap">
+                <a class="apln_btn_delete _PM_newsstand_unsubscribe" href="#" role="button" data-pid="006"
+                   data-custom-clk="nsd_myn*a.unsub" style="display: inline-block;">
+                  <i class="apln_btn_ico_delete"></i>
+                  <span class="blind">MY뉴스에서 삭제</span>
+                </a>
+                <a class="apln_btn_subscribe _PM_newsstand_subscribe" href="#" role="button" aria-haspopup="true"
+                   data-pid="006" data-all-clk="nsd_all*a.sub" style="display:none">
+                  <i class="apln_btn_ico_plus"></i>
+                  <span class="apln_btext">구독</span>
+                </a>
+              </div><!--apln_btn_wrap--><!--x 버튼-->
+            </div><!--press_header-->
+
+            <div class="apln_list_wrap">
+              <div class="apln_news_thumb">
+                <a href="#" class="apln_nt_link" target="_blank" data-gdid="015" data-aid="9a88ee94aabe622c" data-pid="015" data-custom-clk="nsd_myn*a.thumb">
+                  <div class="apln_nt_thumbwrap">
+                    <img class="apln_nt_thumb"
+                         src="https://s.pstatic.net/static/newsstand/2019/0314/article_img/9022/101859_001.jpg"
+                         width="190" height="131" alt="韓 기업들 줄줄이 '탈중국'…'소주성'에 북한뿐이니">
+                    <i class="thumb_bd"></i>
+                  </div>
+                  <div class="apln_nt_textwrap">
+                    <p class="apln_nt_text">韓 기업들 줄줄이 '탈중국'…'소주성'에 북한뿐이니</p>
+                    <span class="apln_nt_bg"></span>
+                  </div>
+                </a>
+              </div>
+              <ul class="apln_list">
+                <li class="apln_item"><a class="apln_link"
+                                         href="http://news.hankyung.com/article/2019031319441?nv=3&amp;utm_source=naver&amp;utm_medium=naver_newsstandcast&amp;utm_campaign=newsstandcast_naver_all"
+                                         data-aid="ee712dd970a21187" data-pid="015" target="_blank" data-gdid="015"
+                                         data-custom-clk="nsd_myn*a.text">'문재인 케어' 직격탄…건강보험, 8년 만에 결국</a></li>
+                <li class="apln_item"><a class="apln_link"
+                                         href="http://news.hankyung.com/article/2019031316811?nv=3&amp;utm_source=naver&amp;utm_medium=naver_newsstandcast&amp;utm_campaign=newsstandcast_naver_all"
+                                         data-aid="186a56e36e0a82bd" data-pid="015" target="_blank" data-gdid="015"
+                                         data-custom-clk="nsd_myn*a.text">"돈 아끼지 않는다"…불안한 20대, 요즘 투자하는 곳</a></li>
+                <li class="apln_item"><a class="apln_link"
+                                         href="http://news.hankyung.com/article/201903139661i?nv=3&amp;utm_source=naver&amp;utm_medium=naver_newsstandcast&amp;utm_campaign=newsstandcast_naver_all"
+                                         data-aid="e8938a21606e0a3f" data-pid="015" target="_blank" data-gdid="015"
+                                         data-custom-clk="nsd_myn*a.text">"日, 한국에 보복조치 실행하면 일본경제가…"</a></li>
+                <li class="apln_item"><a class="apln_link"
+                                         href="http://news.hankyung.com/article/201903132059e?nv=3&amp;utm_source=naver&amp;utm_medium=naver_newsstandcast&amp;utm_campaign=newsstandcast_naver_all"
+                                         data-aid="eb058e1341f6df8d" data-pid="015" target="_blank" data-gdid="015"
+                                         data-custom-clk="nsd_myn*a.text">5억이던 위례 아파트, 3개월 만에…'초토화'</a></li>
+                <li class="apln_item"><a class="apln_link"
+                                         href="http://news.hankyung.com/article/201903143242e?nv=3&amp;utm_source=naver&amp;utm_medium=naver_newsstandcast&amp;utm_campaign=newsstandcast_naver_all"
+                                         data-aid="b394b55725d76549" data-pid="015" target="_blank" data-gdid="015"
+                                         data-custom-clk="nsd_myn*a.text">집값 많이 오른 곳, 매매 보다 ○○ 많았다</a></li>
+                <li class="apln_item"><a class="apln_link"
+                                         href="http://news.hankyung.com/article/201903132228i?nv=3&amp;utm_source=naver&amp;utm_medium=naver_newsstandcast&amp;utm_campaign=newsstandcast_naver_all"
+                                         data-aid="f3077373dfe46ced" data-pid="015" target="_blank" data-gdid="015"
+                                         data-custom-clk="nsd_myn*a.text">밤11시 검찰에 '정준영 카톡' 기습제출한 권익위</a></li>
+              </ul>
+            </div><!--apln_list_wrap-->
+
+          </div><!--news_wrap-->
+        </div><!--news_stand-->
+      </div><!--news_cast-->
+
       <div class="sports">ssss</div><!--news-->
+
+
     </div><!--left_con-->
 
     <div class="right_con">
@@ -174,10 +327,6 @@
 
   </div><!--wrap-->
 </div><!--content-->
-
-
-
-
 
 
 <script>
