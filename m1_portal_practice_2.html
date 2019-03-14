@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>portal markup</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/portal.css" rel="stylesheet">
+  <link href="css/layout2.css" rel="stylesheet">
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="js/portal.js" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--헤더영역-->
+
+  <div class="content">
+    <div class="content-inner">
+      <div class="portal-content">
+        <div class="area_top">
+          <ul id="gnb">
+            <li><a href="#">메일</a></li>
+            <li><a href="#">뉴스</a></li>
+            <li><a href="#">지도</a></li>
+            <li><a href="#">증권</a></li>
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">카페</a></li>
+            <li><a href="#">쇼핑</a></li>
+          </ul>
+          <div class="search">
+            <form action="" id="sform">
+              <fieldset>
+                <legend class="blind">검색</legend>
+                <span class="search_bd">
+                  <input type="text" id="query" name="query">
+                  <button type="button" class="img_keyboard btn_key #toggle_keyboard"><span class="ir_wa">한글입력기</span></button>
+                  <button type="submit" class="ico_pctop btn_search" tabindex="2"><span class="ir_wa">검색</span></button>
+                </span>
+                <div class="complete">
+                  <a href="javascript:" role="button" class="btn_arw">
+                    <span class="blind">자동완성 펼치기</span>
+                    <span class="ico_arr"></span>
+                  </a>
+                </div>
+              </fieldset>
+            </form>
+            <a href="javascript:" id="btn_keyboard" role="button" class="btn_keyboard">
+              <span class="blind">입력키보드</span>
+              <span class="ico_keyboard"></span>
+            </a>
+          </div><!--search-->
+        </div>
+
+        <div id="menu_tab" class="panel_bloc">
+          <h3 id="newTab" class="tit_tabcont tit_news #title active" data-tab="tab1"><a href="" data-toggle="tab" class="txt_pctop link_tit #news"><span class="ir_wa">뉴스</span></a></h3>
+          <div id="news tab1" class="wrap_tabcont wrap_news active">
+            <ul>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="//img2.daumcdn.net/thumb/C308x188/?fname=http://t1.daumcdn.net/alvolo/_thumbnails_cutter/media_mobile/20190411GMT/20190411_145354GMT_FSLxfYXzHnHCU3rAKj7d" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">거대한 '망원경이 된 지구'..인류, 진짜 '블랙홀'을 보다</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="//img2.daumcdn.net/thumb/C308x188/?fname=http://t1.daumcdn.net/alvolo/_thumbnails_cutter/media_mobile/20190411GMT/20190411_145354GMT_FSLxfYXzHnHCU3rAKj7d" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">노인복지 연령 65→70세, 신호탄 쏜 정부</strong>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div><!--#news-->
+          <!--news-->
+
+          <h3 id="entertainTab" class="tit_tabcont tit_entertain #title" data-tab="tab2"><a href="" data-toggle="tab" class="txt_pctop link_tit #enter"><span class="ir_wa">연예</span></a></h3>
+          <div id="entertain tab2" class="wrap_tabcont wrap_entertain">
+            <ul>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="https://s.pstatic.net/static/www/mobile/edit/2019/0412/cropImg_339x222_155524693705687624.jpeg" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">거대한 '망원경이 된 지구'..인류, 진짜 '블랙홀'을 보다</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="https://s.pstatic.net/static/www/mobile/edit/2019/0412/cropImg_339x222_155526286762580113.jpeg" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">노인복지 연령 65→70세, 신호탄 쏜 정부</strong>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--entertainment-->
+
+          <h3 id="sportsTab" class="tit_tabcont tit_sports #title" data-tab="tab3"><a href="" data-toggle="tab" class="txt_pctop link_tit #sports"><span class="ir_wa">스포츠</span></a></h3>
+          <div id="sports tab3" class="wrap_tabcont wrap_sports">
+            <ul>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="//img2.daumcdn.net/thumb/C308x188/?fname=http://t1.daumcdn.net/alvolo/_thumbnails_cutter/media_mobile/20190411GMT/20190411_145354GMT_FSLxfYXzHnHCU3rAKj7d" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">거대한 '망원경이 된 지구'..인류, 진짜 '블랙홀'을 보다</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="//img2.daumcdn.net/thumb/C308x188/?fname=http://t1.daumcdn.net/alvolo/_thumbnails_cutter/media_mobile/20190411GMT/20190411_145354GMT_FSLxfYXzHnHCU3rAKj7d" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">노인복지 연령 65→70세, 신호탄 쏜 정부</strong>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--sports-->
+
+          <h3 id="shoppingTab" class="tit_tabcont tit_shopping #title" data-tab="tab4"><a href="" class="txt_pctop link_tit #movie"><span class="ir_wa">쇼핑</span></a></h3>
+          <div id="shopping tab4" class="wrap_tabcont wrap_shopping #shopping">
+            <ul>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="//img2.daumcdn.net/thumb/C308x188/?fname=http://t1.daumcdn.net/alvolo/_thumbnails_cutter/media_mobile/20190411GMT/20190411_145354GMT_FSLxfYXzHnHCU3rAKj7d" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">거대한 '망원경이 된 지구'..인류, 진짜 '블랙홀'을 보다</strong>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="news_list">
+                  <span class="thumb_img">
+                    <img src="//img2.daumcdn.net/thumb/C308x188/?fname=http://t1.daumcdn.net/alvolo/_thumbnails_cutter/media_mobile/20190411GMT/20190411_145354GMT_FSLxfYXzHnHCU3rAKj7d" width="225" height="120" class="img_thumb" alt="">
+                    <span class="frame_gall"></span>
+                    <span class="ico_pctop ico_view"></span>
+                  </span>
+                  <div class="cont_item">
+                    <strong class="tit_item">노인복지 연령 65→70세, 신호탄 쏜 정부</strong>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--shopping-->
+
+        </div><!--panel_bloc-->
+
+        <div class="weather">
+          <div class="wrap_today">
+            <a href="#" class="link_weather" target="_blank">
+              <div class="info_weather">
+                <span class="wrap_desc night">
+                  <span class="ico_wl"></span>
+                  <span class="desc_temp">
+                    <span class="txt_weather">구름많음</span>
+                    <strong class="txt_temp">6 <span class="txt_unit">℃</span></strong>
+                  </span>
+                </span>
+              </div>
+            </a>
+            <dl class="dl_weather">
+              <dt><span class="ico_weather ico_type_wind"></span><span class="txt_tit">풍속</span></dt>
+              <dd>0.6m/s</dd>
+            </dl><!--dl_weather-->
+            <dl class="dl_weather">
+              <dt><span class="ico_weather ico_type_humidity"></span><span class="txt_tit">습도</span></dt>
+              <dd>77%</dd>
+            </dl><a href="?w=tot&amp;DA=Z8T&amp;q=%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EC%88%98%EC%A7%80%EA%B5%AC%20%EB%AF%B8%EC%84%B8%EB%A8%BC%EC%A7%80&amp;rtmaxcoll=ATM" class="link_air" onclick="smartLog(this, &quot;s=TO&amp;a=Z8TO&amp;pg=1&amp;r=1&amp;rc=1&amp;p=8&amp;e=&amp;dc=Z8T&amp;d=direct_72&amp;at=link&quot;, event);">
+            <dl class="dl_weather">
+              <dt><span class="ico_weather ico_dust"></span><span class="txt_tit">미세먼지</span></dt>
+              <dd class="dust_type2">보통</dd>
+            </dl>
+          </div><!--wrap_today-->
+        </div><!--weather-->
+      </div>
+    </div><!--content-inner-->
+  </div><!--content-->
+
+
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+</body>
+</html>

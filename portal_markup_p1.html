@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
 
   <title>M PJT 1 - portal markup</title>
 
@@ -24,10 +24,11 @@
       border: none;
     }
 
-    li{
+    li {
       list-style: none;
     }
-    a{
+
+    a {
       text-decoration: none;
       color: #000;
       font-size: 12px;
@@ -105,7 +106,6 @@
     .content:after {
       display: block;
       clear: both;
-
       height: 100%;
     }
 
@@ -117,48 +117,63 @@
 
     /*left*/
 
-    .left_con{
-      flex: 0.5 auto;
+    .left_con {
+
     }
-
-
 
     /*뉴스영역*/
-    .news_stand{
+    .news_stand, .sports {
       border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #e0e0e0;
+      margin-bottom: 10px;
     }
-    .news_wrap{
+
+    .news_wrap, .sports {
+      display: block;
       padding: 9px 0 0 14px;
+      height: 190px;
     }
-    .press_header{
+
+    .press_header {
       position: relative;
       height: 24px;
     }
-    .p_title{
+
+    .p_title {
       display: inline-block;
     }
-    .edit_date{
+
+    .edit_date {
       flex: 1;
       font-size: 11px;
       color: #666;
       padding-left: 10px;
     }
-    .apln_btn_subscribe{
+
+    .apln_btn_subscribe {
       flex: 1;
     }
 
-
     .apln_news_thumb {
       position: relative;
+      float: left;
     }
-    .apln_nt_thumbwrap{
+
+    .apln_nt_thumbwrap {
       padding: 12px 0 0;
     }
 
-    .apln_nt_thumb{
+    .apln_nt_thumb {
 
     }
-    .area_newsstand .thumb_bd{
+
+    .thumb_bd {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .area_newsstand .thumb_bd {
       position: absolute;
       left: 0;
       top: 0;
@@ -166,25 +181,83 @@
       right: 0;
       border: 1px solid #000;
     }
-    .apln_nt_textwrap{
+
+    .apln_nt_textwrap {
       width: 168px;
       position: absolute;
       left: 0;
       bottom: 0;
       z-index: 20;
       height: 30px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
       color: #fff;
       padding: 10px 11px;
       line-height: 18px;
     }
-    .apln_nt_bg{
+
+    .apln_nt_bg {
 
     }
 
+    .apln_list {
+      overflow: hidden;
+      float: left;
+      padding: 10px 15px;
+    }
 
+    .apln_list li {
+      line-height: 22px;
+    }
 
+    .apln_list li:hover a {
+      border-bottom: 1px solid #333;
+    }
 
+    /*스포츠*/
+    .sports {
+      height: 130px;
+    }
+
+    .list_relay {
+
+    }
+
+    .list_relay li {
+      position: relative;
+      float: left;
+    }
+
+    .ico_pctop {
+      position: absolute;
+      right: 20px;
+      top: 0px;
+      background: #333;
+      color: #fff;
+      border-radius: 10px;
+      padding: 2px 7px;
+    }
+
+    .relay_general .link_relay.fst {
+      display: block;
+      width: 200px;
+      padding-left: 12px;
+      border-left: 0;
+    }
+
+    .event_team {
+      position: absolute;
+      left: 0;
+      top: 67px;
+      display: block;
+
+    }
+
+    .txt_team {
+
+    }
+    .ir_wa{
+
+    }
 
   </style>
 </head>
@@ -270,7 +343,8 @@
 
             <div class="apln_list_wrap">
               <div class="apln_news_thumb">
-                <a href="#" class="apln_nt_link" target="_blank" data-gdid="015" data-aid="9a88ee94aabe622c" data-pid="015" data-custom-clk="nsd_myn*a.thumb">
+                <a href="#" class="apln_nt_link" target="_blank" data-gdid="015" data-aid="9a88ee94aabe622c"
+                   data-pid="015" data-custom-clk="nsd_myn*a.thumb">
                   <div class="apln_nt_thumbwrap">
                     <img class="apln_nt_thumb"
                          src="https://s.pstatic.net/static/newsstand/2019/0314/article_img/9022/101859_001.jpg"
@@ -310,12 +384,71 @@
                                          data-custom-clk="nsd_myn*a.text">밤11시 검찰에 '정준영 카톡' 기습제출한 권익위</a></li>
               </ul>
             </div><!--apln_list_wrap-->
-
           </div><!--news_wrap-->
         </div><!--news_stand-->
       </div><!--news_cast-->
 
-      <div class="sports">ssss</div><!--news-->
+      <div class="sports">
+        <div class="press_header">
+          <h3 class="p_title">주요경기</h3>
+        </div><!--press_header-->
+
+        <ul class="list_relay relay_general">
+          <li>
+            <a href="#" class="link_relay fst" title="03월 14일 19시 30분">
+              <span class="screen_out">경기시간</span>
+              <span class="txt_time">19:30</span>
+              <span class="txt_league">KBL</span>
+              <span class="event_team fst">
+                <img src="//img2.daumcdn.net/thumb/F52x52/?fname=http://t1.daumcdn.net/media/img-section/sports13/logo/team/10/70_300300.png"
+                     width="26" height="26" class="img_thumb" alt="">
+                <span class="txt_team">안양KGC</span>
+                <em class="txt_score">
+                  <span class="inner_score">
+                    <span class="num_pctop num_none">
+                      <span class="ir_wa">-</span>
+                    </span>
+                  </span>
+                </em>
+              </span>
+              <span class="screen_out">대</span>
+              <span class="event_team">
+                <img src="//img2.daumcdn.net/thumb/F52x52/?fname=http://t1.daumcdn.net/media/img-section/sports13/logo/team/10/16_300300.png"
+                     width="26" height="26" class="img_thumb" alt="">
+                <span class="txt_team">원주DB</span>
+                <em class="txt_score">
+                  <span class="inner_score">
+                    <span class="num_pctop num_none">
+                      <span class="ir_wa">-</span>
+                    </span>
+                  </span>
+                </em>
+              </span>
+              <span class="ico_pctop tag_cast cast9">
+                <span class="ir_wa">전력분석</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://sports.media.daum.net/sports/gamecenter/80020701" class="link_relay fst #item @3-1"
+               title="03월 15일 11시 30분"><span class="screen_out">경기시간</span><span class="txt_time">11:30</span><span
+                    class="txt_league">NBA</span><span class="event_team fst"><img
+                    src="//img2.daumcdn.net/thumb/F52x52/?fname=http://t1.daumcdn.net/media/img-section/sports13/logo/team/12/7_300300.png"
+                    width="26" height="26" class="img_thumb" alt=""><span class="txt_team">덴버</span><em
+                    class="txt_score"><span class="inner_score"><span class="num_pctop num4"><span
+                    class="ir_wa">4</span></span><span class="num_pctop num7"><span class="ir_wa">7</span></span></span></em></span><span
+                    class="screen_out">대</span><span class="event_team"><img
+                    src="//img2.daumcdn.net/thumb/F52x52/?fname=http://t1.daumcdn.net/media/img-section/sports13/logo/team/12/6_300300.png"
+                    width="26" height="26" class="img_thumb" alt=""><span class="txt_team">댈러스</span><em
+                    class="txt_score"><span class="inner_score"><span class="num_pctop num4"><span
+                    class="ir_wa">4</span></span><span class="num_pctop num1"><span class="ir_wa">1</span></span></span></em></span><span
+                    class="ico_pctop tag_cast cast2"><span class="ir_wa">문자중계</span></span></a>
+          </li>
+        </ul>
+
+
+      </div><!--sports-->
 
 
     </div><!--left_con-->
