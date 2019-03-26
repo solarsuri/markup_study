@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel=”stylesheet” href=”css/jquery-ui.css”>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <title>template</title>
+
+  <style>
+    a{
+      text-decoration: none;
+    }
+    li{
+      list-style: none;
+    }
+    .faqBody{
+      width: 1024px;
+      margin: 124px auto 0;
+      padding: 0 24px 60px;
+    }
+    .tab-menus{
+      margin: 0;
+      margin-bottom: 60px;
+      padding: 0;
+    }
+    .tab-list{
+      max-width: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .tab-item{
+      float: left;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #5C6476;
+      letter-spacing: -0.1px;
+      cursor: pointer;
+      transition: 0.08s;
+      list-style: none;
+    }
+    .tab-trigger.tab-selected{
+      background-color: #3E63BC;
+      border: 1px solid #3E63BC;
+      color: white;
+      font-weight: bold;
+    }
+    .tab-trigger{
+      display: inline-block;
+      width: 128px;
+      text-align: center;
+      border-radius: 3px;
+      padding: 15px 0;
+      margin: 0 5px 5px 0;
+      border: 1px solid rgba(0,0,0,0.05);
+      background: #FAFAFA;
+      text-decoration: none;
+      color: #333;
+    }
+    .component-tab .tab-trigger{
+      display: inline-block;
+    }
+    .tab-contents{
+      outline: 0;
+      margin: 0;
+      padding: 0;
+    }
+    .accordion-item{
+      margin-top: -1px;
+    }
+    .accordion-selected{
+      font-weight: bold;
+      border-top: 1px solid #E5E5E5;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    .accordion-trigger{
+      position: relative;
+      display: block;
+      color: #000;
+      padding: 22px 16px;
+      transition: 0.08s;
+      background-color: #fff;
+    }
+    .accordion-trigger:after{
+      position: absolute;
+      top: 12px;
+      right: 8px;
+      width: 44px;
+      height: 44px;
+      background-image: url(https://toss.im/assets/img/down_arrow.png);
+      background-size: cover;
+      z-index: 200;
+    }
+    .accordion-selected{
+      border-bottom: 1px solid #ECECEC;
+    }
+    article{
+      word-break: keep-all;
+    }
+    .accordion-target{
+      padding: 36px 16px;
+      background-color: #FAFAFA;
+      line-height: 24px;
+      font-size: 15px;
+    }
+    article p{
+      margin-bottom: 1rem;
+      color: rgba(88,88,101);
+    }
+    article ol{
+      counter-reset: item 0;
+    }
+    article li{
+      margin-bottom: 0.75rem;
+    }
+    article ol > li::before{
+      /*content: counter(item) ".";*/
+      /*counter-increment: item 1;*/
+      content: counter(item);
+      counter-increment: item;
+      position: absolute;
+      width: 2rem;
+      margin-left: -1.5rem;
+      font-weight: 500;
+      color: #3369e8;
+    }
+    .accordion-item{
+      border-top: 1px solid #ECECEC;
+      border-bottom: 1px solid #ECECEC;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="faqBody conponent-tab">
+    <div class="tab-menus">
+      <ul class="tab-list" style="width: 1761px;">
+        <li class="tab-item"><a href="#faq-category-0" class="tab-trigger tab-selected">자주 묻는 질문</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">송금</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">송금</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">계좌 조회</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">신용등급 조회</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">송금</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">비대면 계좌 개설</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">송금</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">신용등급 조회</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">송금</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">비대면 계좌 개설</a></li>
+        <li class="tab-item"><a href="#faq-category-1" class="tab-trigger">송금</a></li>
+      </ul>
+    </div><!--tab-menus-->
+
+    <div class="tab-contents">
+      <div class="tab-target tab-selected" id="faq-category-0">
+        <ul class="accordion-list">
+          <li class="accordion-item">
+            <a href="#faq-435" class="accordion-trigger accordion-selected">토스 송금 수수료 정책을 알려주세요</a>
+            <article class="accordion-target" id="faq-435">
+              <p>토스 송금 수수료 정책입니다.</p>
+              <ol>
+                <li><p>계좌 송금, 토스머니 옮기기 월 10회 무료<br>(11회째부터 건당 500원)</p></li>
+                <li><p>계좌 송금, 토스머니 옮기기 월 10회 무료</p></li>
+                <li><p>계좌 송금, 토스머니 옮기기 월 10회 무료</p></li>
+              </ol>
+              <p>(2019.02.01 기준)</p>
+            </article>
+          </li>
+          <li class="accordion-item">
+            <a class="accordion-trigger" href="#faq-485">입금확인증은 어디에서 발급 받을 수 있나요?</a>
+            <article class="accordion-target" id="faq-485" data-id="485">
+              <p>거래 내용을 증빙하기위한 '서비스 이용내역 확인서'를 발급해드리고 있으며, 토스 앱으로 직접 발급받을 수 있습니다. <a href="supertoss://transfer/receipt">입금확인증 요청</a></p>
+              <p>이용약관 "서비스 이용 내역의 확인 대상 및 보존기간"에 의거해 1만 원을 초과하는 거래내용은 5년 동안 거래내역을 보관합니다.</p>
+            </article>
+          </li>
+          <li class="accordion-item">
+            <a class="accordion-trigger" href="#faq-485">입금확인증은 어디에서 발급 받을 수 있나요?</a>
+            <article class="accordion-target" id="faq-485" data-id="485">
+              <p>거래 내용을 증빙하기위한 '서비스 이용내역 확인서'를 발급해드리고 있으며, 토스 앱으로 직접 발급받을 수 있습니다. <a href="supertoss://transfer/receipt">입금확인증 요청</a></p>
+              <p>이용약관 "서비스 이용 내역의 확인 대상 및 보존기간"에 의거해 1만 원을 초과하는 거래내용은 5년 동안 거래내역을 보관합니다.</p>
+            </article>
+          </li>
+          <li class="accordion-item">
+            <a class="accordion-trigger" href="#faq-485">입금확인증은 어디에서 발급 받을 수 있나요?</a>
+            <article class="accordion-target" id="faq-485" data-id="485">
+              <p>거래 내용을 증빙하기위한 '서비스 이용내역 확인서'를 발급해드리고 있으며, 토스 앱으로 직접 발급받을 수 있습니다. <a href="supertoss://transfer/receipt">입금확인증 요청</a></p>
+              <p>이용약관 "서비스 이용 내역의 확인 대상 및 보존기간"에 의거해 1만 원을 초과하는 거래내용은 5년 동안 거래내역을 보관합니다.</p>
+            </article>
+          </li>
+        </ul>
+      </div><!--tab-target-->
+
+      <div class="tab-target tab-selected" id="faq-category-0">
+        <ul class="accordion-list">
+          <li class="accordion-item">
+            <a href="#faq-435" class="accordion-trigger">토스 송금 수수료 정책을 알려주세요</a>
+            <article class="accordion-target" id="faq-435">
+              <p>토스 송금 수수료 정책입니다.</p>
+              <ol>
+                <li><p>계좌 송금, 토스머니 옮기기 월 10회 무료<br>(11회째부터 건당 500원)</p></li>
+                <li><p>계좌 송금, 토스머니 옮기기 월 10회 무료</p></li>
+                <li><p>계좌 송금, 토스머니 옮기기 월 10회 무료</p></li>
+              </ol>
+              <p>(2019.02.01 기준)</p>
+            </article>
+          </li>
+          <li class="accordion-item">
+            <a class="accordion-trigger" href="#faq-485">입금확인증은 어디에서 발급 받을 수 있나요?</a>
+            <article class="accordion-target" id="faq-485" data-id="485">
+              <p>거래 내용을 증빙하기위한 '서비스 이용내역 확인서'를 발급해드리고 있으며, 토스 앱으로 직접 발급받을 수 있습니다. <a href="supertoss://transfer/receipt">입금확인증 요청</a></p>
+              <p>이용약관 "서비스 이용 내역의 확인 대상 및 보존기간"에 의거해 1만 원을 초과하는 거래내용은 5년 동안 거래내역을 보관합니다.</p>
+            </article>
+          </li>
+          <li class="accordion-item">
+            <a class="accordion-trigger" href="#faq-485">입금확인증은 어디에서 발급 받을 수 있나요?</a>
+            <article class="accordion-target" id="faq-485" data-id="485">
+              <p>거래 내용을 증빙하기위한 '서비스 이용내역 확인서'를 발급해드리고 있으며, 토스 앱으로 직접 발급받을 수 있습니다. <a href="supertoss://transfer/receipt">입금확인증 요청</a></p>
+              <p>이용약관 "서비스 이용 내역의 확인 대상 및 보존기간"에 의거해 1만 원을 초과하는 거래내용은 5년 동안 거래내역을 보관합니다.</p>
+            </article>
+          </li>
+        </ul>
+      </div><!--tab-target-->
+    </div>
+  </section><!--faqBody 전체 탭 하위 리스트들을 묶는 영역-->
+
+<script>
+
+</script>
+
+</body>
+</html>
