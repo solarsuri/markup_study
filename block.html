@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>block문</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+
+
+  <!--거짓으로 취급하는 값-->
+  <!--
+      false
+      undefined
+      null
+      0
+      NaN
+      the empty string("")
+   -->
+
+<script>
+  // block문은 코드를 묶는 가장 기본적인 문법으로 중괄호 {}에 의해 범위가 결정된다.
+  // 일반적으로 제어 흐름문 (if, for, while)과 함께 사용된다.
+  while (x < 10){
+      x++;
+  }  // {x++;}는 블록문임
+
+  if(case1){
+      statement1;
+  }else if(case2){
+      statement2;
+  }else if(case3){
+      statement3;
+  }else{
+      statement_last;
+  }
+
+  // 텍스트 개체의 문자 수가 3인 경우 함수 checkData는 true를 반환함.
+  // 그렇지 않으면 경고표시를 하고 false를 반환함.
+  function checkData() {
+      if(document.form1.threeChar.value.length == 3){
+          return true;
+      }else{
+          alert("enter exactly three characters. " + document.form1.threeChar.value + "is not valid");
+          return false;
+      }
+  }
+
+  // switch문
+  // 프로그램이 표현식을 평가하고 값을 조건과 비교함.
+  // 만약 값이 일치한다면 프로그램은 각 조건의 하위 문장을 실행함.
+  switch (expression) {
+      case label_1:
+          statements_1
+          break;
+      case label_2:
+          statements_2
+          break;
+          ...
+      default:
+          statements_def
+          break;
+  }
+
+  // 예외 처리문
+    // throw문 ( 예외를 사용할 때 throw문을 사용함 )
+    // try...catch문
+
+  throw "error2"; // string type
+  throw 42; // number type
+  throw true; // boolean type
+  throw {toString: function () {
+          return "i'm an object!;"
+      }};
+
+
+  // try...catch 문법은
+    // 시도할 블록을 표시하고 예외가 발생했을때 하나 이상의 반응을 명시함
+    // 만약 예외가 발생했을때 try...catch 문법은 예외를 잡아냄
+  // try...catch 문법은 하나 이상의 문장을 포함한 try 블록과 try 블록에서 예외가 발생했을때
+  // 어떤것을 할 것인지 명시된 문장을 포함한 0개 이상의 catch 블록으로 구성됨
+  function getMonthName(mo) {
+      mo = mo-1; // adjust month number for array index ( 1=jan, 12=dec )
+      var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+      if(months[mo] != null){
+          return months[mo];
+      }else{
+          throw "InvalidMonthNo"; // throw keyword is used here
+      }
+  }
+
+  try { // statements to try
+      monthName = getMonthName(myMonth); // function could throw exception
+  }
+  catch(e){
+      monthName = "unknown";
+      logMyErrors(e); // pass exception object to error handler
+  }
+
+
+
+
+</script>
+
+</body>
+</html>
