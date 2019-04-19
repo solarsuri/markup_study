@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>template</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<h4>TCPSCHOOL.com <a href="http://tcpschool.com/html/html5_element_input">http://tcpschool.com/html/html5_element_input</a></h4>
+  <pre>
+
+      < html5의 요소들 >
+
+        의미요소
+          header
+          nav
+          main
+          section
+          aside
+          article
+          footer
+          figure
+
+        멀티미디어 요소
+          video
+          audio
+
+        그래픽 요소
+          canvas
+          svg
+
+        input 요소의 타입
+          number
+          date
+          time
+          calendar
+          range
+
+    </pre>
+
+  <abbr></abbr> 줄임말
+
+  <pre>
+
+      < 다양한 타입의 input 요소 >
+
+        텍스트 입력
+        비밀번호
+        라디오버튼
+        체크박스(checkbox)
+        파일 선택 박스
+        선택(select)입력(drop-down 리스트)
+        문장입력
+        버튼(button)입력
+        전송버튼(submit)
+        필드셋(fieldset)
+
+
+      < html5에서 새롭게 추가된 다양한 타입의 input 요소 >
+        datalist 요소
+        keygen 요소
+        output 요소
+
+      < datalist 요소 >
+      datalist 요소는 input 요소에 대해 미리 정의된 옵션 리스트를 명시해 주는 요소이다.
+      사용자는 텍스트를 바로 입력해도 되고, 드롭다운 메뉴에서 미리 정의한 옵션 중의 하나를 골라도 됨.
+
+      ex)
+      <form action="/template.html">
+        <input list="lectures" name="lecture">
+          <datalist id="lectures">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JAVA">
+            <option value="C++">
+          </datalist>
+        <input type="submit" value="전송">
+      </form>
+
+
+
+    < keygen 요소 >
+    키젠 요소의 목적은 사용자가 인증할 수 있는 안전한 방법을 제공하는 것이다.
+    키젠 요소는 사용자가 입력한 데이터를 암호화하여 서버로 전송함
+    이때 생성된 키(key)를 가지고 서버는 해당 사용자의 인증을 수행함
+    <form action="template.html">
+      사용자 : <br>
+      <input type="text" name="username"><br>
+      암호화 방법 : <br>
+      <keygen name="security"><br>
+    </form>
+
+
+
+    < output 요소 >
+    output 요소는 스크립트 등으로 실행된 계산의 결과를 바로 표시해주는 요소이다.
+    <form action="template.html" oninput="total.value=parseInt(value01.value)/parseInt(value02.value)">
+      <input type="number" id="value01" name="input01" value="20">
+         /
+      ( 0
+      <input type="range" id="value02" name="input02" value="50" min="0" max="100">
+      100 )
+      =s
+      <output name="total" for="value01 value02"></output><br><br>
+
+    </form>
+
+
+  </pre>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
