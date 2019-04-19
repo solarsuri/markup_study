@@ -8,6 +8,123 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
+    .txt{
+      background: #eee;
+      border: #ccc;
+      width: 45%;
+      padding: 15px;
+      margin: 0 100px;
+      overflow: scroll;
+    }
+    h5{
+      padding: 0;
+      margin: 0;
+    }
+
+
+    /*input type="range" 커스터마이징 하기*/
+
+    input[type=range] {
+      -webkit-appearance: none; /* 기본슬라이드 숨기기*/
+      width: 30%; /* Firefox에서는 특정한 넓이가 필요*/
+      background: transparent; /* Chrome에서 투명하게 출력 */
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    input[type=range]:focus {
+      outline: none; /* input range에 포커스 되었을 경우 기본 블러처리 제거 */
+    }
+
+    input[type=range]::-ms-track {
+      width: 30%;
+      cursor: pointer;
+      /* IE에서 기본슬라이드 숨기기  */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+
+    .customizing input[type=range] {
+      -webkit-appearance: none;
+    }
+    .customizing  input[type=range]:focus {
+      outline: none;
+    }
+
+
+    /*webkit (Chrome)의 경우*/
+    .customizing input[type=range]::-webkit-slider-runnable-track {
+      width: 30%;
+      height: 5px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: #2497E3;
+    }
+    .customizing input[type=range]::-webkit-slider-thumb {
+      border: 1px solid #2497E3;
+      height: 15px;
+      width: 10px;
+      background: #ffffff;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -5px; /*chrome의 경우 margin-top값을 부여해야합니다.*/
+    }
+    .customizing input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #2497E3; /*네모버튼에 포커스를 줬을때 뒤에 라인(ㅡ)의 효과*/
+    }
+    /*Firefox의 경우*/
+    .customizing input[type=range]::-moz-range-track {
+      width: 30%;
+      height: 5px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: #2497E3;
+    }
+    .customizing input[type=range]::-moz-range-thumb {
+      border: 1px solid #2497E3;
+      height: 15px;
+      width: 10px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+    /*IE의 경우*/
+    .customizing input[type=range]::-ms-track {
+      width: 30%;
+      height: 5px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    .customizing input[type=range]::-ms-fill-lower {
+      background: #2497E3;
+    }
+    .customizing input[type=range]::-ms-fill-upper {
+      background: #2497E3;
+    }
+    .customizing input[type=range]::-ms-thumb {
+      margin-top: 1px;
+      border: 1px solid #2497E3;
+      height: 15px;
+      width: 10px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+    .customizing input[type=range]:focus::-ms-fill-lower {
+      background: #2497E3;/*네모버튼에 포커스를 줬을때 뒤에 라인(ㅡ)의 효과*/
+    }
+    .customizing input[type=range]:focus::-ms-fill-upper {
+      background: #2497E3; /*네모버튼에 포커스를 줬을때 뒤에 라인(ㅡ)의 효과*/
+    }
+
+
+  </style>
 </head>
 
 <body>
@@ -41,78 +158,223 @@
           calendar
           range
 
+    <abbr></abbr> abbr 줄임말
+
     </pre>
 
-  <abbr></abbr> 줄임말
 
-  <pre>
+  <hr>
 
-      < 다양한 타입의 input 요소 >
+    <pre>
 
-        텍스트 입력
-        비밀번호
-        라디오버튼
-        체크박스(checkbox)
-        파일 선택 박스
-        선택(select)입력(drop-down 리스트)
-        문장입력
-        버튼(button)입력
-        전송버튼(submit)
-        필드셋(fieldset)
+        < 다양한 타입의 input 요소 >
+
+          텍스트 입력
+          비밀번호
+          라디오버튼
+          체크박스(checkbox)
+          파일 선택 박스
+          선택(select)입력(drop-down 리스트)
+          문장입력
+          버튼(button)입력
+          전송버튼(submit)
+          필드셋(fieldset)
 
 
-      < html5에서 새롭게 추가된 다양한 타입의 input 요소 >
-        datalist 요소
-        keygen 요소
-        output 요소
+        < html5에서 새롭게 추가된 다양한 타입의 input 요소 >
+          datalist 요소
+          keygen 요소
+          output 요소
 
-      < datalist 요소 >
-      datalist 요소는 input 요소에 대해 미리 정의된 옵션 리스트를 명시해 주는 요소이다.
-      사용자는 텍스트를 바로 입력해도 되고, 드롭다운 메뉴에서 미리 정의한 옵션 중의 하나를 골라도 됨.
+        < datalist 요소 >
+        datalist 요소는 input 요소에 대해 미리 정의된 옵션 리스트를 명시해 주는 요소이다.
+        사용자는 텍스트를 바로 입력해도 되고, 드롭다운 메뉴에서 미리 정의한 옵션 중의 하나를 골라도 됨.
 
-      ex)
-      <form action="/template.html">
-        <input list="lectures" name="lecture">
-          <datalist id="lectures">
-            <option value="HTML">
-            <option value="CSS">
-            <option value="JAVA">
-            <option value="C++">
-          </datalist>
-        <input type="submit" value="전송">
+        ex)
+        <form action="/template.html">
+          <input list="lectures" name="lecture">
+            <datalist id="lectures">
+              <option value="HTML">
+              <option value="CSS">
+              <option value="JAVA">
+              <option value="C++">
+            </datalist>
+          <input type="submit" value="전송">
+        </form>
+
+
+
+      < keygen 요소 >
+      키젠 요소의 목적은 사용자가 인증할 수 있는 안전한 방법을 제공하는 것이다.
+      키젠 요소는 사용자가 입력한 데이터를 암호화하여 서버로 전송함
+      이때 생성된 키(key)를 가지고 서버는 해당 사용자의 인증을 수행함
+      <form action="template.html">
+        사용자 : <br>
+        <input type="text" name="username"><br>
+        암호화 방법 : <br>
+        <keygen name="security"><br>
       </form>
 
 
 
-    < keygen 요소 >
-    키젠 요소의 목적은 사용자가 인증할 수 있는 안전한 방법을 제공하는 것이다.
-    키젠 요소는 사용자가 입력한 데이터를 암호화하여 서버로 전송함
-    이때 생성된 키(key)를 가지고 서버는 해당 사용자의 인증을 수행함
-    <form action="template.html">
-      사용자 : <br>
-      <input type="text" name="username"><br>
-      암호화 방법 : <br>
-      <keygen name="security"><br>
-    </form>
+      < output 요소 >
+      output 요소는 스크립트 등으로 실행된 계산의 결과를 바로 표시해주는 요소이다.
+      <form action="template.html" oninput="total.value=parseInt(value01.value)/parseInt(value02.value)">
+        <input type="number" id="value01" name="input01" value="20">
+           /
+        ( 0
+        <input type="range" id="value02" name="input02" value="50" min="0" max="100">
+        100 )
+        =
+        <output name="total" for="value01 value02"></output><br><br>
+
+      </form>
+
+      <div class="txt">
+        <h5>정리</h5>
+        <pre>
+          datalist 요소 : input 요소에 대해 미리 정의된 옵션 리스트를 명시
+          keygen 요소 : form 요소 안에 두 개의 key를 만들어주는 생성기를 명시
+          output 요소 : 스크립트 등으로 실행된 계산의 결과를 바로 나타냄
+        </pre>
+      </div>
+
+    </pre>
+
+<hr>
 
 
+    <pre>
+       < input 요소의 타입 >
+      form 요소는 다양한 타입의 input 요소를 포함할 수 있음
+      HTML에서 자주 사용되는 input 요소의 대표적인 타입은
+        1. txt - 텍스트입력
+        2. password - 비밀번호 입력
+        3. submit - 전송 버튼
+        4. radio button - 라디오 버튼
+        5. checkbox - 체크박스
+        6. button - 버튼 입력
+        7. file - 파일 선택
+        8. select - 선택 입력
+        9. textarea - 문장 입력
+       10. fieldset - 필드셋
 
-    < output 요소 >
-    output 요소는 스크립트 등으로 실행된 계산의 결과를 바로 표시해주는 요소이다.
-    <form action="template.html" oninput="total.value=parseInt(value01.value)/parseInt(value02.value)">
-      <input type="number" id="value01" name="input01" value="20">
-         /
-      ( 0
-      <input type="range" id="value02" name="input02" value="50" min="0" max="100">
-      100 )
-      =s
-      <output name="total" for="value01 value02"></output><br><br>
+      ex) range 커스터 마이징
+      <form action="" class="customizing">
+        0 <input type="range" name="favnum" min="1" max="9">9
+      </form>
 
-    </form>
+      < 색상 입력 >
+      <input type="color" name="favcolor" value="#CC6600">
+
+      < 날짜 입력 (date) >
+      <form action="template.html">
+        날짜를 입력하세요
+        <input type="date" name="startday">
+        <input type="submit" value="전송">
+      </form>
+
+      또한 min과 max 속성을 사용하여 날짜 선택에 제한값을 설정할 수도 있다.
+      <input type="date" name="theday" min="1977-01-01" max="2020-12-31">
+
+      < 시간 입력(time) >
+      시간 입력을 도움
+      <form action="template.html">
+        태어난 시간이 언제인가요?<br>
+        <input type="time" name="birthtime">
+        <input type="submit" value="전송">
+      </form>
+
+      < 날짜와 시간 입력(datetime-local) >
+      input 태그의 type 속성값을 "datetime-local"로 설정하면 input 요소는 사용자가 날짜와 시간을 입력할 수 있도록 해줌
+      <form action="/examples/media/request.php">
+        이 수업을 처음 들은 날을 골라주세요!<br>
+        그렇다면 혹시 그 시간도 기억하시나요?<br><br>
+        <input type="datetime-local" name="starttime">
+        <input type="submit" value="전송">
+      </form>
+
+      < 연도와 월 입력(month) >
+      < 연도와 주 입력(week) >
+      input 태그의 type 속성값을 "month"로 설정하면
+      input 요소는 사용자가 연도와 월을 입력할 수 있도록 해줌
+      <form action="/examples/media/request.php">
+        여러분이 태어난 연월을 선택해 보세요!<br><br>
+        <input type="month" name="birthmonth">
+        <input type="submit" value="전송">
+      </form>
+
+      < 이메일 입력 >
+      <form action="/examples/media/request.php">
+        여러분의 이메일 주소를 입력해 주세요 :<br><br>
+        <input type="email" name="email">
+        <input type="submit" value="전송">
+      </form>
+
+      < url 입력 >
+      <form action="/examples/media/request.php">
+        TCPSchool의 URL 주소를 입력해 주세요 :<br><br>
+        <input type="url" name="url">
+        <input type="submit" value="전송"><br><br>
+        ("http://"까지 모두 정확히 입력해야 전송할 수 있습니다.)
+      </form>
+
+      < 전화번호 입력 > tel 타입은 사파리8에서만 지원함
+      <form action="template.html">
+        전화번호를 입력해 주세요 : <br><br>
+        <input type="tel" name="tel">
+        <input type="submit" value="전송">
+      </form>
+
+      < 검색어 입력 >
+      <form action="/examples/media/request.php">
+        여러분이 평소에 가장 많이 찾아본 검색어를 입력해 주세요 :<br><br>
+        <input type="search" name="keyword">
+        <input type="submit" value="전송">
+      </form>
+    </pre>
 
 
-  </pre>
+<hr>
 
+    <pre>
+      < form 요소 >
+        웹페이지에서는 form 요소를 사용해 사용자로부터 입력을 받을 수 있음
+        또한 사용자가 입력한 데이터를 서버로 보낼때에도 form 요소를 사용함
+
+        < + form 요소 문법 >
+      <form action="처리할 페이지 주소" method="getget|post"></form>
+        action 속성은 입력받은 데이터를 처리할 서버 상의 스크립트 파일의 주소를 명시한다.
+        이렇게 전달받은 데이터를 처리하는 스크립트 파일을 폼 핸들러(form-handler)라고 함
+
+        method 속성은 입력받은 데이터를 서버에 전달할 방식을 명시함
+
+        따라서 사용자가 form 요소를 통해 입력한 데이터는 action 속성에 명시된 위치로 method 속성의 방식을 통해 전달됨
+
+          * *method 속성
+          method 속성을 통해 명시할 수 있는 form 요소의 전달 방식은
+          *** GET 방식과 POST 방식으로 나눠짐
+
+            GET 방식은 주소에 데이터(data)를 추가하여 전달하는 방식
+            데이터가 주소 입력창에 그대로 나타나며, 전송할 수 있는 데이터의 크기 또한 제한적이다.
+            따라서 검색 엔진의 쿼리(query)와 같이 크기가 작고 중요도가 낮은 정보를 보낼 때 주로 사용
+
+            POST 방식은 데이터를 별도로 첨부하여 전달하는 방식
+            데이터가 외부에 드러나지 않으며 전송할 수 있는 데이터의 크기 또한 제한이 없다
+            따라서 보안성 및 활용성이 GET 방식보다 좋다.
+
+        <form action="index.html">
+          별명을 입력해주세요 : <br>
+            <input type="text" name="nickname" value="별명"><br><br>
+            <input type="submit" value="전송">
+        </form>
+    </pre>
+
+<hr>
+
+    <pre>
+
+    </pre>
 
 <script>
 
