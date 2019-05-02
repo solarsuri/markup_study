@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>플렉스 박스 레이아웃</title>
+  <link rel="stylesheet" href="css/flexbox.css">
+</head>
+
+<body>
+
+
+<div class="layout1">
+  <h3>1. 스크롤 없는 100% 레이아웃</h3>
+  <div class="header"></div>
+  <div class="tablist"></div>
+  <div class="content">
+    <div class="aside"></div>
+    <div class="main"></div>
+  </div>
+</div>
+
+
+<div class="layout2">
+  <h3>2. 내비게이션 영역</h3>
+  <div class="header">
+    <div class="logo">logo</div>
+    <div class="search">
+      <input type="text" title="검색" class="search_input">
+      <button type="button" class="search_button">검색</button>
+    </div>
+    <div class="gnb">gnb</div>
+  </div><!--header-->
+  <!--
+    크기가 고정되어야 하는 flex item(.flex-item 클래스)에는 flex: none 속성을 적용함.
+      flex: none;은 flex-grow: 0과 flex-shrink: 0, flex-basis: auto 속성을 축약해 표현한 것.
+    오른쪽으로 정렬할 요소는 margin-left: auto; 속성을 적용함.
+      요소의 바깥 여백을 설정하는 속성에 속성값으로 auto를 정용하면 flexbox에서 flex item을 쉽게 배치할 수 있음.
+      margin: auto 속성을 적용하면 flex item의 바깥 여백이 자동으로 확장되어 flex item이 flex container의 가운데에 위치하게 됨.
+
+     ** flex item을 수평으로 배치할 때 auto 속성값을 사용할 수 있음.
+      - margin-right: auto; 바깥 여백이 오른쪽의 모든 공간을 차지하기 위해 flex item을 오른쪽에서 왼쪽으로 밈.
+      - margin: 0 auto; 바깥 여백이 flex item을 양쪽에서 밀기 때문에 flex item이 수평 중앙에 위치함.
+      - margin-left: auto; 바깥 여백이 왼쪽의 모든 공간을 차지하기 위해 flex item을 왼쪽에서 오른쪽으로 밈.
+
+     ** flex item을 수직으로 배치할 때 auto 속성값을 사용
+      - margin-bottom : auto; 바깥 여백이 아래쪽의 모든 공간을 차지하기 위해 flex item을 아래쪽에서 위쪽으로 밈.
+      - margin : auto 0; 바깥 여백이 flex item을 위아래로 밀기 때문에 flex item이 수직 중앙에 위치함.
+      - margin-top : auto; 바깥 여백이 위쪽의 모든 공간을 차지하기 위해 flex item을 위쪽에서 아래쪽으로 밈.
+   -->
+</div>
+
+
+
+<div class="layout4">
+  <h3>4. 정렬이 다른 메뉴</h3>
+  <ul class="tablist">
+    <li><a href="#" class="tab selected">HOME</a></li>
+    <li><a href="#" class="tab">채널</a></li>
+    <li><a href="#" class="tab">비디오</a></li>
+  </ul>
+  <pre>
+    < justify-content: space-between 속성으로 자식요소를 일정한 간격으로 정렬 >
+    justify-content 속성은 주축을 기준으로 flex item을 수평으로 정렬함.
+    다음과 같은 5개의 속성 값으로 다양한 수평 정렬 레이아웃을 만들 수 있음.
+
+    - flex-start(기본값) : 주축의 시작 부분을 기준으로 flex item을 정렬함
+    - center : 주측의 중앙을 기준으로 flex item을 정렬함
+    - flex-end : 주축의 끝부분을 기준으로 flex item을 정렬함
+    - space-around : 주축을 기준으로 flex item을 일정한 간격으로 정렬함
+    - space-between : 첫 번째와 마지막 flex item은 주축의 시작 부분과 끝부분에 정렬하고 나머지 flex item을 일정한 간격으로 정렬함.
+  </pre>
+</div>
+
+
+
+
+
+
+
+<div class="layout5">
+  <h3>5. 폼 레이블 수직 중앙 정렬</h3>
+  <div class="row_wrap">
+    <div class="row">
+      <span class="title_content">채널 키워드</span>
+      <input type="text" name="search" placeholder="키워드와 키워드 사이는 쉼포로 구분" class="txtfield">
+    </div>
+    <div class="row">
+      <span class="title_content">Channel keyword</span>
+      <input class="txtfield" type="text" name="search" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요.">
+    </div>
+    <div class="row">
+      <span class="title_content big">채널 키워드</span>
+      <input class="txtfield big" type="text" name="search" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요.">
+    </div>
+    <div class="row">
+      <span class="title_content big">Channel keyword </span>
+      <input class="txtfield big" type="text" name="search" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요.">
+    </div>
+    <div class="row">
+      <span class="title_content big">Channel keyword keyword</span>
+      <input class="txtfield big" type="text" name="search" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요.">
+    </div>
+  </div>
+  <pre>
+    < align-items: center 속성으로 자식 요소를 교차축의 중앙에 정렬 >
+
+    align-items 속성은 주축을 기준으로 flex item을 수직으로 정렬함
+    - stretch(기본값): flex item의 높으를 늘려 flex container의 전체 높이를 채움
+    - flex-start: 교차축의 시작 부분을 기준으로 flex item을 정렬함
+    - center : 교차축의 중앙을 기준으로 flex item을 정렬함
+    - baseline : 글꼴의 기준선인 baseline을 기준으로 flex item을 정렬함
+    - flex-end : 교차축의 끝부분을 기준으로 flex item을 정렬함
+  </pre>
+</div>
+
+
+
+
+
+<div class="layout6">
+  <h3>중앙 정렬 아이콘</h3>
+  <p>align-items: center</p>
+  <p>justify-content: center</p>
+  <p>margin: auto</p>
+</div>
+
+
+
+
+
+
+<div class="layout7">
+  <div class="filter_box">가나다라마바사아자차카타파하가나다라마바사아자차카타파하</div>
+  <div class="filter_box">가나다</div>
+  <div class="filter_box">가나다라마바사</div>
+  <div class="filter_box">가나다라</div>
+  <button type="button" class="btn_refresh">버튼</button>
+</div>
+
+
+
+
+
+
+
+<div class="layout8">
+  <h3>말줄임과 아이콘</h3>
+  <div class="list_fixed">
+    <div class="title_wrap">
+      <h4 class="title">조건에 맞는 총 10000000개의 매물이 있습니다.</h4>
+      <span class="school_type" role="img" aria-label="가정"><i class="sp_icon"></i></span>
+      <span class="school_type" role="img" aria-label="통학차량"><i class="sp_icon"></i></span>
+      <span class="school_type" role="img" aria-label="공립"><i class="sp_icon"></i></span>
+    </div>
+  </div>
+  <pre>
+    display: inline-flex 속성으로 부모 요소를 인라인 블록 요소로 만들기
+    display: inline-flex 속성은 flex container를 인라인 블록 요소로 만드는 속성임.
+    display: flex 속성을 적용한 flex container는 블록요소이다!!
+
+
+  </pre>
+</div>
+
+
+
+
+
+
+<div class="layout9">
+  <h3>9. 위아래로 흐르는 목록</h3>
+  <div class="ui_box">
+    <h3>상하 정렬 롤링 리스트</h3>
+    <div class="photo_container">
+      <ul class="photo_list column">
+        <li class="photo_box">
+          <div class="photo"></div>
+          <div class="description">Title1</div>
+        </li>
+        <li class="photo_box">
+          <div class="photo"></div>
+          <div class="description">Title2</div>
+        </li>
+        <li class="photo_box">
+          <div class="photo"></div>
+          <div class="description">Title3</div>
+        </li>
+        <li class="photo_box">
+          <div class="photo"></div>
+          <div class="description">Title4</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="layout10">
+  <h3>가로세로 비율을 유지하는 반응형 박스</h3>
+  <div class="ui_box">
+    <h3>가로세로 비율을 유지하는 반응형 박스</h3>
+    <ul class="channel_list">
+      <li class="item">
+        <div class="thumb">
+          <img class="image" src="https://goo.gl/hXkDkP" width="100%" height="100%">
+        </div>
+        <strong class="title">
+          가나다라마바사아자차카타파하
+        </strong>
+      </li>
+      <li class="item">
+        <div class="thumb"></div>
+        <strong class="title">
+          가나다라마바사
+        </strong>
+      </li>
+      <li class="item">
+        <div class="thumb">
+          <img class="image" src="https://goo.gl/hXkDkP" width="100%" height="100%">
+        </div>
+        <strong class="title">
+          가나다라마바사
+        </strong>
+      </li>
+      <li class="item">
+        <div class="thumb">
+          <img class="image" src="https://goo.gl/hXkDkP" width="100%" height="100%">
+        </div>
+        <strong class="title">
+          가나다라마바사아자차카타파하
+        </strong>
+      </li>
+      <li class="item">
+        <div class="thumb">
+          <img class="image" src="https://goo.gl/hXkDkP" width="100%" height="100%">
+        </div>
+        <strong class="title">
+          가나다라마바사아자차카타파하
+        </strong>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="layout3">
+  <h3>3. 브라우저 화면 아래에 붙는 푸터</h3>
+  <div class="footer">
+    <div class="land_information">
+      <a href="http://www.naver.com/policy/service.html" class="land_information_link" target="_blank">이용약관</a><a href="http://land.naver.com/index/declaredArticlePolicy.nhn" class="land_information_link" target="_blank">매물신고운영</a><a href="http://policy.naver.com/rules/privacy.html" class="land_information_link important" target="_blank">개인정보처리방침</a><a href="https://help.naver.com/support/service/main.nhn?serviceNo=746" class="land_information_link" target="_blank">부동산 고객센터</a>
+    </div><!--land_information-->
+    <p class="land_alert">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며, 제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+    <div class="land_copyright">
+      <a href="#" target="_blank" aria-label="네이버">
+        <i class="icon icon_naver_logo" aria-hidden="true"></i>
+      </a>Copyright ⓒ <a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="land_copyright_point">NAVER Corp.</a> All Rights Reserved.</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+</body>
+</html>

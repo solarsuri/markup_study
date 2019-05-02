@@ -1,0 +1,291 @@
+html,body{
+    height: 100%;
+}
+.layout1{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.layout1 .header{
+    height: 65px;
+    background: #00c73c;
+}
+.layout1 .tablist{
+    height: 70px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+}
+.layout1 .content{
+    display: flex;
+    flex: 1;
+}
+.layout1 .aside{
+    display: flex;
+    flex: none;
+    width: 400px;
+    background-color: #bfbab078;
+}
+.layout1 .main{
+    display: flex;
+    flex: 1;
+    overflow: auto;
+}
+
+
+
+
+
+.layout2{}
+.layout2 .header{
+    display: flex;
+    background-color: #00c73c;
+}
+.layout2 .gnb,.layout2 .logo,.layout2 .search{
+    flex: none;
+}
+.layout2 .gnb{
+    margin-left: auto;
+    /*이거 쓰면 오른쪽으로 정렬해버림*/
+}
+.layout2 .gnb,.layout2 .logo{
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, .4);
+}
+.layout2 .search{
+    display: flex;
+    width: 400px;
+    padding: 14px 0;
+    margin-left: 10px;
+}
+.layout2 .search_input{
+    width: 375px;
+}
+.layout2 .search_button{
+    width: 50px;
+    border: 1px solid #666;
+    background-color: #26a93a;
+}
+
+
+
+
+.layout3{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.footer{
+    height: 100px;
+    margin-top: auto;
+}
+
+
+
+
+.layout4 ul,.layout4 li{
+    list-style: none;
+}
+.layout4 div,.layout4 ul,.layout4 li,.layout4 body{
+    margin: 0;
+    padding: 0;
+}
+.layout4 a{
+    text-decoration: none;
+    color: inherit;
+}
+.layout4 .tablist{
+    display: flex;
+    justify-content: space-between;  /*정렬 명령어*/
+    flex: 0 0 60px;
+    border: 1px solid rgba(0,0,0,0.12);
+    background: #fff;
+}
+.layout4 .tab{
+    position: relative;
+    display: block;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 15px;
+}
+.layout4 .tab.selected:after{
+    position: absolute;
+    bottom: 19px;
+    left: 13px;
+    right: 13px;
+    height: 9px;
+    background: rgba(0,209,69,0.7);
+    content: '';
+}
+
+
+
+
+
+
+.layout5 .row_wrap{
+    width: 400px;
+    margin: 0 auto;
+}
+.layout5 .row{
+    display: flex;
+    padding: 10px 0;
+}
+.txtfield.big{
+    height: 150px;
+}
+.title_content.big{
+    height: 150px;
+}
+.title_content{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+}
+.txtfield{
+    flex: 1;
+    width: 300px;
+    height: 38px;
+    font-size: 13px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.layout7{
+    display: flex;
+    height: 70px;
+    padding-left: 8px;
+    border: 1px solid #000;
+}
+.layout7 .filter_box{
+    flex: 0 1 auto;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 38px;
+    padding: 8px;
+    margin: 16px 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+.btn_refresh{
+    height: 38px;
+    margin: 16px 15px 0 auto;
+    padding: 9px 11px 8px;
+    border: 1px solid rgba(0,0,0,0.15);
+    font-size: 17px;
+    flex: none;
+}
+
+
+
+
+
+
+.layout8{
+
+}
+.layout8 .list_fixed{
+    height: 60px;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+.layout8 .title_wrap{
+    display: inline-flex;
+    max-width: 1000%;
+    height: 100%;
+    border-bottom: 1px solid #000;
+}
+.layout8 .title_wrap .title{
+    overflow: hidden;
+    padding-top: 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+}
+.layout8 .school_type{
+    margin-left: 4px;
+}
+.layout8 .school_type{
+    margin-left: 4px;
+}
+.layout8 .school_type[aria-label='가정'] .sp_icon{
+    background-position: -253px -63px;
+    width: 26px;
+    height: 16px;
+}
+.sp_icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://test-img.land.naver.com/static/beta-service/ver/feature-828/pc/img/sprites/sp_map.png);
+    background-image: url(https://test-img.land.naver.com/static/beta-service/ver/feature-828/pc/img/sprites/sp_map.svg), none;
+    background-size: 283px 249px;
+}
+.school_type[aria-label='통학차량'] .sp_icon {
+    background-position: -132px -34px;
+    width: 44px;
+    height: 16px;
+}
+.sp_icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://test-img.land.naver.com/static/beta-service/ver/feature-828/pc/img/sprites/sp_map.png);
+    background-image: url(https://test-img.land.naver.com/static/beta-service/ver/feature-828/pc/img/sprites/sp_map.svg), none;
+    background-size: 283px 249px;
+}
+.school_type[aria-label='공립'] .sp_icon {
+    background-position: -148px -206px;
+    width: 26px;
+    height: 16px;
+}
+.sp_icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://test-img.land.naver.com/static/beta-service/ver/feature-828/pc/img/sprites/sp_map.png);
+    background-image: url(https://test-img.land.naver.com/static/beta-service/ver/feature-828/pc/img/sprites/sp_map.svg), none;
+    background-size: 283px 249px;
+}
+
+
+
+
+
+
+
+
+
+
+.channel_list{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    flex-basis: 33.33%;
+    margin-top: 20px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+.thumb{
+    flex: auto;
+    background-color: #dcdcdf;
+}
+.image{
+    vertical-align: top;
+}
+.channel_list .title{
+    flex: none;
+    flex-basis: 40px;
+    min-height: 0;
+    margin-top: 10px;
+    font-size: 13px;
+}
