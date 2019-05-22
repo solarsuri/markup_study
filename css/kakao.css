@@ -1,0 +1,9 @@
+.wrap{
+    max-width: 530px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #999;
+}
+.bankbook{
+    background: yellow;
+}
