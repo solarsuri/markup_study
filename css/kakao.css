@@ -1,4 +1,7 @@
-.wrap{
+li{
+    list-style: none;
+}
+.wrap,.deposit_wrap{
     max-width: 530px;
     margin: auto;
     padding: 10px;
@@ -6,4 +9,46 @@
 }
 .bankbook{
     background: yellow;
+}
+
+/*gnb*/
+.navbar{
+    background: 100%;
+    height: 30px;
+    padding: 15px 30px;
+}
+#gnb{
+    display: flex;
+}
+#gnb li{
+
+}
+
+/*카뱅예금카피*/
+.content{
+    width: 100%;
+    height: 100%;
+}
+.bank_deposit{
+    background: darkgray;
+    color: #fff;
+    font-size: 12px;
+    padding: 50px 30px;
+}
+.bank_deposit h4{
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+.service_info{
+
+}
+.benefit{
+    font-size: 20px;
+}
+.condition{
+    display: flex;
+    padding: 0;
+}
+.condition li{
+    flex: 1;
 }
