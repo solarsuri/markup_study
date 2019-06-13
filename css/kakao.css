@@ -1,3 +1,6 @@
+body{
+    font-size: 14px;
+}
 ul{
     padding: 0;
     margin: 0;
@@ -11,12 +14,34 @@ p{
 a,a:hover{
     color: #111;
 }
+.mt5{
+    margin-top: 5px;
+}
 .ml8{
     margin-left: 8px;
+}
+.pl20{
+    padding-left: 20px;
+}
+.mt30{
+    margin-top: 30px;
 }
 .fz12{
     font-size: 12px;
     line-height: 1.5;
+}
+.fz20{
+    font-size: 20px;
+    line-height: 1.5;
+}
+.bold{
+    font-weight: bold;
+}
+.text_center{
+    text-align: center;
+}
+.text_right{
+    text-align: right;
 }
 .wrap,.deposit_wrap{
     max-width: 530px;
@@ -158,16 +183,226 @@ a,a:hover{
     background: #dee2e6;
     margin-top: 30px;
 }
-.next_btn a{
+.next_btn a {
     display: block;
     text-align: center;
     color: #868e96;
 }
-.next_btn{
-    &.active{
-         background: yellow;
-     }
-     a{
-         color: #333;
-     }
+.next_btn.active {
+    background: yellow;
+}
+.next_btn.active a{
+    color: #333;
+}
+
+
+
+
+/*계좌개설 research step2*/
+.calculator{
+    text-align: center;
+    padding: 20px 0 10px;
+}
+.calculator p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.calculator strong {
+    font-size: 25px;
+    color: #28a745;
+}
+.fin_12{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 2;
+}
+.set{
+    display: flex;
+}
+.btn_set{
+    margin-left: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px;
+}
+.slider_wrap{
+    max-width: 530px;
+    margin: 5px auto;
+}
+.slider.ui-widget-content{
+    height: 3px;
+    border: 0 none !important;
+    background-image: linear-gradient(to right, #83d000, #f1c900 51%, #ff6a00);
+}
+.ui-slider .ui-slider-handle{
+    width:2.3em;
+    height:2.3em;
+    top:-1em;
+    margin-left:-1em;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    background: #ffffff !important;
+    border:0 none !important;
+    outline: none;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+.ui-slider-horizontal{
+    height: 0.55em;
+}
+.ui-widget-header{
+    background-color:#e6e6e6;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+.dot_box{
+    display: flex;
+}
+.dot_box span{
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+.dot_box i{
+    display: inline-block;
+    overflow: hidden;
+    width: 2px;
+    height: 6px;
+    background: #e6e6e6;
+}
+.dot_box em{
+    font-size: 13px;
+}
+.deposit_sum{
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 10px;
+}
+.deposit_box{
+    display: flex;
+    font-size: 12px;
+}
+.deposit_box strong{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: #666;
+}
+.input_sum{
+    flex: 4;
+    font-weight: bold;
+}
+.input_sum p,.input_sum input{
+    text-align: right;
+    font-size: 14px;
+}
+.input_sum span{
+    display: block;
+    text-align: right;
+    color: #999;
+}
+.cal_btn{
+    width: 100%;
+    padding: 15px 0;
+    background: #eee;
+    margin-top: 30px;
+    border: 2px solid #e0e0e0;
+}
+.cal_btn a {
+    display: block;
+    text-align: center;
+    color: #868e96;
+}
+.cal_btn.active {
+    background: #fff;
+}
+.cal_btn.active a{
+    font-weight: bold;
+    color: #333;
+}
+
+.interest{
+    border: 1px solid #333;
+    padding: 10px 15px;
+    background: #eee;
+    margin-top: 30px;
+}
+.interest strong{
+    display: flex;
+}
+.interest span{
+    flex: 1;
+}
+.interest hr{
+    margin: 10px 0;
+}
+.input_sum select{
+    border: none;
+    -webkit-appearance: menulist-button !important;
+}
+.balance{
+    display: flex;
+    background: #eee;
+    border: 2px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.balance span{
+    flex: 1;
+}
+
+
+/*layer*/
+.layer{
+    max-width: 530px;
+    margin: auto;
+    border: 1px solid #999;
+}
+.confirm{
+    padding: 30px 30px 20px;
+}
+.confirm h3:after{
+    display: block;
+    content: '';
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background: #eee;
+    margin: 15px 0;
+}
+.join li{
+    display: flex;
+}
+.join span{
+    flex: 2.5;
+    font-weight: bold;
+    color: #999;
+}
+.join strong{
+    flex: 1;
+    text-align: right;
+}
+.check_btn{
+    display: flex;
+    border-top: 1px solid #999;
+}
+.check_btn li{
+    padding: 15px 0;
+}
+.check_btn li a{
+    display: block;
+    text-align: center;
+}
+.check_btn li:first-child{
+    flex: 1;
+    background: #f8f9fa;
+}
+.check_btn li:last-child{
+    flex: 2;
+    background: yellow;
 }
