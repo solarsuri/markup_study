@@ -9,6 +9,9 @@
   <link href="css/kakao.css" rel="stylesheet">
   <link href="css/kakao.scss" rel="stylesheet">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -128,41 +131,57 @@
         <strong>0원</strong>
       </div>
     </div>
+
+    <div class="join_btn active">
+      <a href="#">정기예금 가입하기</a>
+    </div><!--next_btn-->
   </div><!--main-->
+
+  <!--layer-->
+  <div class="layer ly_fade">
+    <div class="ly_bg">
+    </div>
+      <div class="ask_join">
+        <div class="confirm">
+          <h3 class="text-center fz20 bold">카카오뱅크 정기예금을 <br> 가입하시겠어요?</h3>
+          <ul class="join">
+            <li>
+              <span>예금 가입액</span>
+              <strong>100,000원</strong>
+            </li>
+            <li>
+              <span>만기일자</span>
+              <strong>2019.06.13</strong>
+            </li>
+            <li>
+              <span>적용금리</span>
+              <strong>연 <em></em>2.00%</strong>
+            </li>
+          </ul>
+        </div>
+        <ul class="check_btn">
+          <li><a href="#" class="no">아니요</a></li>
+          <li><a href="#" class="ys">예</a></li>
+        </ul>
+      </div> <!--ask_join-->
+
+  </div><!--layer-->
 </div><!--deposit_wrap-->
-
-
-
-<!--layer-->
-<div class="layer">
-  <div class="confirm">
-    <h3 class="text-center fz20 bold">카카오뱅크 정기예금을 <br> 가입하시겠어요?</h3>
-    <ul class="join">
-      <li>
-        <span>예금 가입액</span>
-        <strong>100,000원</strong>
-      </li>
-      <li>
-        <span>만기일자</span>
-        <strong>2010.06.13</strong>
-      </li>
-      <li>
-        <span>적용금리</span>
-        <strong>연 <em></em>2.00%</strong>
-      </li>
-    </ul>
-  </div>
-  <ul class="check_btn">
-    <li><a href="#">아니요</a></li>
-    <li><a href="#">예</a></li>
-  </ul>
-</div><!--layer-->
 
 
 
 
 <script>
 
+    var ly = $(".layer");
+    // var lybg = $(".ly_bg");
+
+    $(".join_btn a").on("click",function () {
+        ly.css({display: "block"});
+    })
+
+
+  
 </script>
 
 </body>
