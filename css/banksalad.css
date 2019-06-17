@@ -1,0 +1,68 @@
+.bold{
+    font-weight: bold;
+}
+h4,p{
+    margin: 0;
+}
+
+
+.bs_wrap{
+    max-width: 530px;
+    margin: auto;
+    border: 1px solid #000;
+}
+#nav{
+    display: none;
+}
+
+.cont{
+
+}
+.sum_asset{
+    position: relative;
+    background: forestgreen;
+    color: #fff;
+    padding: 25px 15px;
+}
+.sum_asset span,.sum_asset strong{
+    display: block;
+}
+.sum_asset span{
+    font-size: 13px;
+}
+.add_asset{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    background: darkslategrey;
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 3px 7px;
+    color: #fff;
+}
+
+.score{
+    display: flex;
+    padding: 20px 15px;
+    justify-content: center;
+    align-items: center;
+}
+.score h4{
+    flex: 1;
+    font-size: 16px;
+}
+.score strong{
+    flex: 3;
+    text-align: right;
+}
+.cash_flow{
+    display: flex;
+    padding: 20px 15px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+}
+.score h4{
+
+}
+.cash_flow strong{
+    flex: 1;
+}
