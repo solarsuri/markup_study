@@ -4,8 +4,20 @@
 h4,p{
     margin: 0;
 }
-
-
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.pd{
+    padding: 10px 15px;
+}
+.pd_lr_15{
+    padding: 0 15px;
+}
+/*뱅셀 인덱스*/
 .bs_wrap{
     max-width: 530px;
     margin: auto;
@@ -15,17 +27,30 @@ h4,p{
     display: none;
 }
 
+.sec_budget{
+    display: flex;
+}
+.sec_budget li{
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+}
+.sec_budget li.active{
+    border-bottom: 2px solid #333;
+}
+
 .cont{
 
 }
 .sum_asset{
     position: relative;
-    background: forestgreen;
+    background: #ccc;
     color: #fff;
     padding: 25px 15px;
 }
 .sum_asset span,.sum_asset strong{
     display: block;
+    font-size: 20px;
 }
 .sum_asset span{
     font-size: 13px;
@@ -65,4 +90,116 @@ h4,p{
 }
 .cash_flow strong{
     flex: 1;
+}
+.cash_flow strong:last-child{
+    text-align: right;
+}
+
+
+.money_flow{
+
+}
+.flow_top{
+    display: block;
+    clear: both;
+    content: '';
+    height: 30px;
+    padding: 8px 15px;
+    background: #eee;
+    font-size: 12px;
+    color: #666;
+}
+.flow_top h4{
+    float: left;
+    font-size: 12px;
+}
+.sum_cash{
+    float: right;
+}
+
+
+.depo{
+
+}
+.depo li{
+    display: flex;
+    padding: 10px 15px;
+}
+.depo li:nth-child(odd){
+    border-bottom: 1px solid #ccc;
+}
+.depo li div{
+    flex: 1;
+}
+.depo li div:last-child{
+    text-align: right;
+}
+.depo li p{
+    font-size: 14px;
+}
+.depo li span{
+    display: block;
+}
+.depo li a{
+    display: block;
+    font-size: 13px;
+    color: #ccc;
+}
+
+
+
+
+/*뱅크셀러드 가계부*/
+.data{
+
+}
+.list{
+    display: flex;
+}
+.list li{
+    flex: 1;
+    text-align: center;
+    border: 1px solid #999;
+    background: #fff;
+}
+.list li:nth-child(n+1){
+    margin-left: -1px;
+}
+.list li.active{
+    background: #eee;
+}
+.state{
+    display: flex;
+    font-size: 12px;
+    padding-top: 15px;
+}
+.state dl{
+    flex: 1;
+}
+.state dd{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.money_book{
+    font-size: 14px;
+}
+.money_book li span{
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: deepskyblue;
+    color: #fff;
+    width: 150px;
+    font-size: 12px;
+}
+.money_book li div:nth-child(2){
+    flex: 2;
+}
+.state dl{
+    margin: 0;
+}
+.state input{
+    vertical-align: middle;
+    margin-right: 5px;
 }
