@@ -7,6 +7,11 @@
   <title>template</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/banksalad.css" rel="stylesheet">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 </head>
 
 <body>
@@ -50,6 +55,19 @@
           <dd>12건</dd>
         </dl>
       </div>
+
+      <div class="state">
+        <!--달력-->
+      </div>
+
+      <div class="state">
+        <div id="chartdiv"></div>
+      </div>
+
+      <div class="state">
+        <!--카드별-->
+      </div>
+
     </div>
 
 
@@ -131,10 +149,36 @@
   </div><!--cont-->
 </div>
 
-
 <script>
+    var data = [{
+        "country": "Dummy",
+        "disabled": true,
+        "litres": 1000,
+        "color": am4core.color("#dadada"),
+        "opacity": 0.3,
+        "strokeDasharray": "4,4"
+    }, {
+        "country": "Lithuania",
+        "litres": 501.9
+    }, {
+        "country": "Estonia",
+        "litres": 301.9
+    }, {
+        "country": "Ireland",
+        "litres": 201.1
+    }, {
+        "country": "Germany",
+        "litres": 165.8
+    }, {
+        "country": "Australia",
+        "litres": 139.9
+    }, {
+        "country": "Austria",
+        "litres": 128.3
+    }];
 
 </script>
+
 
 </body>
 </html>

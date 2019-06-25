@@ -203,3 +203,9 @@ li{
     vertical-align: middle;
     margin-right: 5px;
 }
+
+/*뱅크샐러드 가계부 통계영역*/
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
